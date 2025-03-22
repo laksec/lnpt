@@ -1,27 +1,34 @@
-# Jadapalli Lakshmaiah - Ethical Hacker & Bug Bounty Hunter
+# Jadapalli Lakshmaiah
 
-Hi there! 👋 I'm **Jadapalli Lakshmaiah**, an aspiring ethical hacker and bug bounty hunter from **India**. I am passionate about cybersecurity, penetration testing, and finding vulnerabilities to help organizations secure their systems.
+Bug Bounty Hunter | Security Researcher
 
+## About Me
 
-## Skills and Expertise
+I'm Jadapalli Lakshmaiah, passionate about uncovering vulnerabilities and securing digital systems. I specialize in web application security, with hands-on experience in bug bounty hunting and cutting-edge security research.
 
-- **Information Gathering**: Proficient in passive and active reconnaissance techniques.
-- **Vulnerability Assessment**: Identifying and analyzing security weaknesses in systems and applications.
-- **Web Application Security**: Testing for common vulnerabilities like SQL Injection, XSS, CSRF, etc.
-- **Network Security**: Scanning and securing network infrastructure.
-- **Tools**: Experienced with tools like Nmap, Burp Suite, Metasploit, Wireshark, and more.
-- **Bug Bounty Platforms**: Actively participating on platforms like HackerOne, Bugcrowd, and Intigriti.
+## Expertise
 
----
+- Web Application Security (XSS, SQLi, SSRF, IDOR, etc.)
+- Advanced Reconnaissance & Enumeration
+- Vulnerability Assessment & Exploitation
+- Bug Bounty Hunting (Actively participating in programs)
+- Researching Emerging Threats & Techniques
 
-## Ethical Hacking Philosophy
+## Tools & Techniques
 
-I believe in using my skills for good and helping organizations secure their systems. Ethical hacking is not just about finding vulnerabilities; it's about understanding the risks and providing solutions to mitigate them.
+- Proficient in Burp Suite, OWASP ZAP, Nmap, and custom scripts
+- Deep knowledge of HTTP protocols, APIs, and modern web frameworks
+- Exploring quantum-resistant security and AI-driven vuln detection
 
----
+## Goals
 
-**Note**: Always hack responsibly and with proper authorization. Cybersecurity is a shared responsibility!
+- Contribute to secure software development
+- Share knowledge through write-ups and tools
+- Push the boundaries of web security research
 
----
+## Contact
 
-© 2023 Jadapalli Lakshmaiah | Ethical Hacker & Bug Bounty Hunter
+- Email: [lakshman.lnpt@gmail.com](mailto:lakshman.lnpt@gmail.com)
+- LinkedIn: [https://www.linkedin.com/in/laksec/](https://www.linkedin.com/in/laksec/)
+
+Happy hunting!

