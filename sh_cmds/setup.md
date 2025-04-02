@@ -34,3 +34,18 @@
 
     export PATH=$PATH:/mnt/c/Users/LAKS/AppData/Local/Programs/Microsoft\ VS\ Code
     alias code='/mnt/c/Users/LAKS/AppData/Local/Programs/Microsoft\ VS\ Code/Code.exe'
+
+## Check if system distro detected GPU
+
+    hashcat -I  # Check here
+    wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/cuda-keyring_1.0-1_all.deb
+    sudo dpkg -i cuda-keyring_1.0-1_all.deb
+    sudo apt update
+    sudo apt-get install -y cuda
+
+# Virtual Box setup
+
+    Download Kali virtual image
+    install Kali
+    Use Pimp_My_Kali for setup
+    Export Kali
