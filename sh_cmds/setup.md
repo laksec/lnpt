@@ -49,3 +49,8 @@
     install Kali
     Use Pimp_My_Kali for setup
     Export Kali
+
+# Chrome Extensions
+
+    - FoxyProxy
+    - Link Gopher
