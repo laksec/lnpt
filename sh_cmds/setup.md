@@ -1,26 +1,28 @@
 # WSL Setup
 
     :- wsl --install kali-linux --name lnpt
-    :- Set ~/.zshrc file
-        - sudo nano ~/.zshrc
-        - source ~/.zshrc
     :- kali-tweaks
         - Change Shell from Bash to Zsh
         - Choose What modules to install
+    :- Set ~/.zshrc file
+        - sudo nano ~/.zshrc
+        - source ~/.zshrc
     :- Install all the neccesory remaining tools
 
 ## Zshrc Setup
 
     # ln -s /mnt/d/work ~/j
-    # ln -s /mnt/d/work/ws ~/ws
-    # ln -s /mnt/d/work/tools ~/tool
 
-    alias cdcyber='cd /mnt/d/work'
-    alias cdws='cd /mnt/d/work/ws'          # Workspace
+    alias cddefault='cd /mnt/d/work'
+    alias cdws='cd /mnt/d/work/ws'
     alias cdtool='cd /mnt/d/work/tools'
     alias cdlnpt='cd /mnt/d/work/tools/lnpt'
     alias cdfiles='cd /mnt/d/work/files'
-    alias cddownload 'cd /mnt/d/download'
+
+    alias cddownload='cd /mnt/d/download'
+
+    alias emptyHistory='sudo echo "" > ~/.zsh_history'
+    alias openHistory='sudo nano ~/.zsh_history'
 
     alias codelnpt='code /mnt/d/work/tools/lnpt'
 
@@ -32,8 +34,11 @@
     export PATH=$PATH:/mnt/c/Program\ Files/Sublime\ Text
     alias subl='/mnt/c/Program\ Files/Sublime\ Text/subl.exe'
 
+
     export PATH=$PATH:/mnt/c/Users/LAKS/AppData/Local/Programs/Microsoft\ VS\ Code
     alias code='/mnt/c/Users/LAKS/AppData/Local/Programs/Microsoft\ VS\ Code/Code.exe'
+
+    PROMPT='%F{green}┌─(%f%F{blue}%~%f%F{green})'$'\n''└─$ '
 
 ## Check if system distro detected GPU
 
