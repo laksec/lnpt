@@ -39,6 +39,7 @@
     alias code='/mnt/c/Users/LAKS/AppData/Local/Programs/Microsoft\ VS\ Code/Code.exe'
 
     PROMPT='%F{green}┌─(%flnpt%F{green})%f-%F{green}[%f%F{blue}%~%f%F{green}]'$'\n''└─$ '
+    PROMPT='%F{green}┌─(%f$(date "+%b%d")%F{green})-%F{green}[%f%F{blue}%~%f%F{green}]'$'\n''└─$ '
     PS1="\[\e[32m\]┌─(\[\e[0m\]Web3\[\e[32m\])-[\[\e[34m\]\w\[\e[0m\]\[\e[32m\]]\[\e[0m\]\n\[\e[32m\]└─$\[\e[0m\] "
 
 ## Check if system distro detected GPU
