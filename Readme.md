@@ -4,7 +4,7 @@ Bug Bounty Hunter | Security Researcher
 
 ## About Me
 
-I'm Jadapalli Lakshmaiah, passionate about uncovering vulnerabilities and securing digital systems. I specialize in web application security, with hands-on experience in bug bounty hunting and cutting-edge security research.
+I'm Jadapalli Lakshmaiah, Passionate about uncovering vulnerabilities and securing digital systems. I specialize in web application security, with hands-on experience in bug bounty hunting and cutting-edge security research.
 
 ## Expertise
 
@@ -31,4 +31,4 @@ I'm Jadapalli Lakshmaiah, passionate about uncovering vulnerabilities and securi
 - Email: [lakshman.lnpt@gmail.com](mailto:lakshman.lnpt@gmail.com)
 - LinkedIn: [https://www.linkedin.com/in/laksec/](https://www.linkedin.com/in/laksec/)
 
-Happy hunting!
+Happy Hunting!
