@@ -81,4 +81,3 @@
     | By: 08:30 PM - Dinner	>>> By: 11:00 PM - Wind-down 	       |
     | By: 10:15 PM - Work	| | By: 12:00 AM - Light creative work |
     |_______________________| |____________________________________|
-
