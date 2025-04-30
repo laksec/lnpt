@@ -67,12 +67,12 @@
 # Daily Routine for Discipline
 
      ____From_12:00_AM______   _________From_06:00_AM______________
-    |    			        | |    By: 06:30 AM - Gentle Mobility  |  
+    |    			        | |    By: 06:30 AM - Gentle Mobility  |
     | By: 06:00 AM - Sleep  >>>    By: 08:15 AM - Work	           |
     | 			            | |    By: 08:30 AM - Breakfast        |
     | 			            | | 				                   |
-    |____From_08:30_AM______| |_________From_01:15_PM______________|	
-    |  By: 11:15 AM - Work  | |        By: 01:30 PM - Lunch        |	
+    |____From_08:30_AM______| |_________From_01:15_PM______________|
+    |  By: 11:15 AM - Work  | |        By: 01:30 PM - Lunch        |
     |  By: 11:30 AM - _Nap  >>>        By: 04:15 PM - Work         |
     |  By: 01:15 PM - Work  | |        By: 04:30 PM - _Nap         |
     | 			            | | 				                   |
