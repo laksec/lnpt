@@ -202,7 +202,7 @@
     Saleae Logic Analyzers # Hardware debugging tools for capturing digital and analog signals
 
 ## 7. Social Engineering 
-    - Tools and resources to aid information gathering and delivery of social engineering attacks - use with extreme caution and only with explicit permission for ethical purposes)
+    - Tools and resources to aid information gathering and delivery of social engineering attacks - use with extreme caution and only with explicit permission for ethical purposes
 
 ### 7.1 Information Gathering (OSINT for Social Engineering)
     theHarvester      # Email, subdomain, people, and port discovery tool

@@ -1,13 +1,13 @@
 # WSL Setup
 
-    :- wsl --install kali-linux --name lnpt
-    :- kali-tweaks
+    # wsl --install kali-linux --name lnpt
+    # kali-tweaks
         - Change Shell from Bash to Zsh
         - Choose What modules to install
-    :- Set ~/.zshrc file
+    # Set ~/.zshrc file
         - sudo nano ~/.zshrc
         - source ~/.zshrc
-    :- Install all the neccesory remaining tools
+    # Install all the neccesory remaining tools
 
 ## Zshrc Setup
 

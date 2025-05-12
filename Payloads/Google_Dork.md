@@ -67,7 +67,7 @@
 
 ### MEDIA SEARCHING
     imagesize:   - Image dimensions                    (imagesize:1920x1080)
-    inpostauthor:- Blog post author                    (inpostauthor:"john doe")
+    inpostauthor# Blog post author                    (inpostauthor:"john doe")
 
 ## ⚙️ SPECIAL CHARACTER SYNTAX
     @            - Social media tags                   (@twitter)
