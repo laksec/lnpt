@@ -123,21 +123,8 @@ kwprocessor -b 2 -e 3 | hashcat --stdout -r best64.rule > passwords.txt
 watch -n 3600 "cewl https://target.com/news -d 2 | grep -Ff keywords.txt"
 
 
-# This version includes performance tuning parameters and real-world workflow integration missing in most wordlist guides. Each command is battle-tested for actual engagements.
+# This version includes performance tuning parameters and real-world workflow integration missing in most wordlist guides. 
+# Each command is battle-tested for actual engagements.
 
 # Need industry-specific adaptations (finance, healthcare, etc.) or advanced rule-based generation?
 
-
-############################################
-############################################
-############################################
-############################################
-#### 12.1.1 Wordlist Generation
-    # Custom wordlist from site, depth 3, min length 6
-    cewl https://target.com -d 3 -m 6 -w custom_words_from_site.txt
-    
-    # Include numbers found on site
-    cewl https://target.com -d 2 --with-numbers -o cewl_with_numbers.txt
-    
-    # Keyword processor (example, may need specific tool)
-    kwp -s /usr/share/wordlists/dirb/common.txt -b 3 -e 3 > mutations.txt

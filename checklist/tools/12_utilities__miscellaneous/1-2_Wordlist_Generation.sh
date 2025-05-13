@@ -71,4 +71,5 @@ crunch 10 10 -t ^%^company202 -o corp_pass.txt
 watch -n 3600 "cewl https://target.com/news | grep -Ff keywords.txt"
 
 
-# This version eliminates redundancy while adding critical flags like --lowercase and --meta that are often overlooked. Each command is optimized for real-world testing scenarios.
+# This version eliminates redundancy while adding critical flags like --lowercase and --meta that are often overlooked. 
+# Each command is optimized for real-world testing scenarios.
