@@ -154,7 +154,9 @@
     dig +short ns target.com | xargs -I{} dig +short {} | sort -u > all_ns_ips.txt
 
 
-    
+    # ZeroTrace is a powerful command-line anonymization tool I created using Python.
+    sudo zerotrace --start [--auto] [--time 3] [--stop]
+      
 # Using Masscan to verify HTTP servers
 masscan -p80,443 -iL subdomains.txt -oG masscan.txt --rate 10000
 
