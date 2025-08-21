@@ -26,7 +26,7 @@
 
     alias codelnpt='code /mnt/d/work/tools/lnpt'
 
-    alias runUpgrade='sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y'
+    alias kupgrade='sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y'
 
     alias openZsh='sudo nano ~/.zshrc'
     alias srcZsh='source ~/.zshrc'
