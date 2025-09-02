@@ -35,8 +35,8 @@
     alias subl='/mnt/c/Program\ Files/Sublime\ Text/subl.exe'
 
 
-    export PATH=$PATH:/mnt/c/Users/LAKS/AppData/Local/Programs/Microsoft\ VS\ Code
-    alias code='/mnt/c/Users/LAKS/AppData/Local/Programs/Microsoft\ VS\ Code/Code.exe'
+    export PATH=$PATH:/mnt/c/Users/laksh/AppData/Local/Programs/Microsoft\ VS\ Code
+    alias code='/mnt/c/Users/laksh/AppData/Local/Programs/Microsoft\ VS\ Code/Code.exe'
 
     PROMPT='%F{green}┌─(%flnpt%F{green})%f-%F{green}[%f%F{blue}%~%f%F{green}]'$'\n''└─$ '
     PROMPT='%F{green}┌─(%f$(date "+%b%d")%F{green})-%F{green}[%f%F{blue}%~%f%F{green}]'$'\n''└─$ '
@@ -61,8 +61,6 @@
 
     - FoxyProxy
     - Link Gopher
-
-
 
 # Daily Routine for Discipline
 
