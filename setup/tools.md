@@ -58,3 +58,11 @@
     go install -v github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
 
     go install github.com/projectdiscovery/tlsx/cmd/tlsx@latest
+
+    ****
+    go install -v github.com/projectdiscovery/chaos-client/cmd/chaos@latest
+    sudo apt install waymore
+    pipx install git+https://github.com/xnl-h4ck3r/xnLinkFinder.git
+
+    curl https://www.virustotal.com/vtapi/v2/domain/report/?apikey\=$VT_KEY\&domain\=snapchat.com | jq -r
+    ****
