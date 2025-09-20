@@ -4,6 +4,7 @@ sudo apt install gccgo-go -y && sudo apt install golang-go -y
 sudo apt install subfinder
 sudo apt install assetfinder
 sudo apt install dirsearch
+sudo apt install sublist3r
 sudo apt install naabu
 
 go install -v github.com/projectdiscovery/mapcidr/cmd/mapcidr@latest
