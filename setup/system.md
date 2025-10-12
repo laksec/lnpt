@@ -9,6 +9,32 @@
         - source ~/.zshrc
     # Install all the neccesory remaining tools
 
+    - https://github.com/termux/termux-app/releases
+    - https://f-droid.org/packages/com.termux/
+
+    - pkg update -y
+    - pkg upgrade -y
+
+    - termux-setup-storage
+    - pkg install wget
+
+    - wget -O install-nethunter-termux https://offs.ec/2MceZWr
+    - chmod +x install-nethunter-termux
+    - ./install-nethunter-termux
+
+    - nethunter/nh          -> Start Kali NetHunter command line interface
+    - nh <command>          -> Run <command> in Kali NetHunter environment
+
+    - nh kex passwd             -> Configure the KeX password (only needed before 1st use)
+    - nh kex &                  -> Start Kali NetHunter Desktop Experience user sessions
+    - nh kex stop               -> Stop Kali NetHunter Desktop Experience
+    - nh -r                     -> Start Kali NetHunter cli as root
+    - nh -r kex passwd          -> Configure the KeX password for root
+    - nh -r kex &               -> Start Kali NetHunter Desktop Experience as root
+    - nh -r kex stop            -> Stop Kali NetHunter Desktop Experience root sessions
+    - nh -r kex kill            -> Kill all KeX sessions
+    - nethunter -r <command>    -> Run <command> in Kali NetHunter environment as root
+
 ## Zshrc Setup
 
     # ln -s /mnt/d/work ~/j
