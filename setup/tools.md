@@ -1,51 +1,76 @@
-### Kali-Linux Tool Installation
+# Kali-Linux Tool Installation
 
-    projectdiscovery tools
-    ----------------------
+## Go Setup
+
+    sudo apt install gccgo-go -y && sudo apt install golang-go -y
     export GOPATH="$HOME/go"
     export PATH="$PATH:$GOPATH/bin"
 
+---
+
+## Go Tools
+
+    - ProjectDiscovery Tool Manager
     go install -v github.com/projectdiscovery/pdtm/cmd/pdtm@latest
 
-    - anew  metabigor  waybackurls
+    - Append only unique lines to files
+    go install github.com/tomnomnom/anew@latest
 
+    - Extract URLs from Wayback Machine archives
+    go install github.com/tomnomnom/waybackurls@latest
 
+    - Probe HTTP/HTTPS responsiveness of hosts
+    go install github.com/tomnomnom/httprobe@latest
 
-    Apt Instalation
-    ---------------
-    sudo apt install sublist3r
+    - Find subdomains related to a domain
+    go install github.com/tomnomnom/assetfinder@latest
 
-    sudo apt install assetfinder
+    - Parallel HTTP requester and matcher
+    go install github.com/tomnomnom/meg@latest
 
-    sudo apt install mitm6
-
-    sudo apt install gowitness
-
-    sudo apt install bloodhound
-
-    sudo apt install tinydns
-
-    sudo apt install httprobe
-
+    - Intel gathering on IPs, Domains, ASN using public data sources
     go install github.com/j3ssie/metabigor@latest
 
+---
+
+### Apt Instalation
+
+    - Wordlists for security testing
     sudo apt install seclists
 
-    Git Tools
-    ---------
-    git clone https://github.com/nsonaniya2010/SubDomainizer.git . && \
-    chmod +x SubDomainizer.py
+    - Lightweight DNS server
+    sudo apt install tinydns
 
-    tomnomnom tools
-    ---------------
-    go install github.com/tomnomnom/waybackurls@latest
-    go install -v github.com/tomnomnom/anew@latest
+    - Passive subdomain enumeration tool
+    sudo apt install sublist3r
 
+    - Screenshot websites for recon
+    sudo apt install gowitness
 
-
-    ****
+    - Find extra archived links from the Wayback Machine
     sudo apt install waymore
+
+    - IPv6 MITM attack tool for Active Directory
+    sudo apt install mitm6
+
+    - Active Directory - visualization & priv esc mapping
+    sudo apt install bloodhound
+
+---
+
+<!-- ### Git Tools
+-  -->
+
+---
+
+### Python/Pipx Tools
+
+    - Discover endpoints & parameters from JS files
     pipx install git+https://github.com/xnl-h4ck3r/xnLinkFinder.git
 
+---
+
+## API Usage Example
+
+    - VirusTotal domain report (replace $VT_KEY with your API key)
     curl https://www.virustotal.com/vtapi/v2/domain/report/?apikey\=$VT_KEY\&domain\=snapchat.com | jq -r
-    ****

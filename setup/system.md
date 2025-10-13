@@ -1,4 +1,4 @@
-# WSL Setup
+#### WSL Setup
 
     # wsl --install kali-linux --name lnpt
     # kali-tweaks
@@ -9,33 +9,36 @@
         - source ~/.zshrc
     # Install all the neccesory remaining tools
 
-    - https://github.com/termux/termux-app/releases
-    - https://f-droid.org/packages/com.termux/
+## GPU Compatibility
 
-    - pkg update -y
-    - pkg upgrade -y
+    hashcat -I  # Check here
+    wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/cuda-keyring_1.0-1_all.deb
+    sudo dpkg -i cuda-keyring_1.0-1_all.deb
+    sudo apt update
+    sudo apt-get install -y cuda
 
-    - termux-setup-storage
-    - pkg install wget
+### Kali NetHunter
 
-    - wget -O install-nethunter-termux https://offs.ec/2MceZWr
-    - chmod +x install-nethunter-termux
-    - ./install-nethunter-termux
+    https://github.com/termux/termux-app/releases
+    https://f-droid.org/packages/com.termux/
 
-    - nethunter/nh          -> Start Kali NetHunter command line interface
-    - nh <command>          -> Run <command> in Kali NetHunter environment
+    pkg update -y
+    pkg upgrade -y
 
-    - nh kex passwd             -> Configure the KeX password (only needed before 1st use)
-    - nh kex &                  -> Start Kali NetHunter Desktop Experience user sessions
-    - nh kex stop               -> Stop Kali NetHunter Desktop Experience
-    - nh -r                     -> Start Kali NetHunter cli as root
-    - nh -r kex passwd          -> Configure the KeX password for root
-    - nh -r kex &               -> Start Kali NetHunter Desktop Experience as root
-    - nh -r kex stop            -> Stop Kali NetHunter Desktop Experience root sessions
-    - nh -r kex kill            -> Kill all KeX sessions
-    - nethunter -r <command>    -> Run <command> in Kali NetHunter environment as root
+    termux-setup-storage
+    pkg install wget
 
-## Zshrc Setup
+    wget -O install-nethunter-termux https://offs.ec/2MceZWr
+    chmod +x install-nethunter-termux
+    ./install-nethunter-termux
+
+    nethunter/nh          -> Start Kali NetHunter command line interface
+    nh <command>          -> Run <command> in Kali NetHunter environment
+
+    nh -r                     -> Start Kali NetHunter cli as root
+    nethunter -r <command>    -> Run <command> in Kali NetHunter environment as root
+
+### Zshrc Setup
 
     # ln -s /mnt/d/work ~/j
 
@@ -64,29 +67,19 @@
     export PATH=$PATH:/mnt/c/Users/laksh/AppData/Local/Programs/Microsoft\ VS\ Code
     alias code='/mnt/c/Users/laksh/AppData/Local/Programs/Microsoft\ VS\ Code/Code.exe'
 
+    # Kali Prompt
     PROMPT='%F{green}┌─(%flnpt%F{green})%f-%F{green}[%f%F{blue}%~%f%F{green}]'$'\n''└─$ '
     PROMPT='%F{green}┌─(%f$(date "+%b%d")%F{green})-%F{green}[%f%F{blue}%~%f%F{green}]'$'\n''└─$ '
+
+    # Ubuntu Prompt
     PS1="\[\e[32m\]┌─(\[\e[0m\]Web3\[\e[32m\])-[\[\e[34m\]\w\[\e[0m\]\[\e[32m\]]\[\e[0m\]\n\[\e[32m\]└─$\[\e[0m\] "
 
-## Check if system distro detected GPU
-
-    hashcat -I  # Check here
-    wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/cuda-keyring_1.0-1_all.deb
-    sudo dpkg -i cuda-keyring_1.0-1_all.deb
-    sudo apt update
-    sudo apt-get install -y cuda
-
-# Virtual Box setup
-
-    Download Kali virtual image
-    install Kali
-    Use Pimp_My_Kali for setup
-    Export Kali
+---
 
 # Chrome Extensions
 
-    - FoxyProxy
-    - Link Gopher
+    FoxyProxy
+    Link Gopher
 
 # Daily Routine for Discipline
 

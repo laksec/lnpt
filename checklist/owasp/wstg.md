@@ -1,6 +1,7 @@
 ## Web Application Security Testing Checklist
 
 #### WSTG-INFO - Information Gathering
+
     WSTG-INFO-01 - Conduct Search Engine Discovery and Reconnaissance for Information Leakage
     WSTG-INFO-02 - Fingerprint Web Server
     WSTG-INFO-03 - Review Webserver Metafiles for Information Leakage
@@ -13,6 +14,7 @@
     WSTG-INFO-10 - Map Application Architecture
 
 #### WSTG-CONF - Configuration and Deploy Management Testing
+
     WSTG-CONF-01 - Test Network Infrastructure Configuration
     WSTG-CONF-02 - Test Application Platform Configuration
     WSTG-CONF-03 - Test File Extensions Handling for Sensitive Information
@@ -27,6 +29,7 @@
     WSTG-CONF-12 - Testing for Content Security Policy
 
 #### WSTG-IDNT - Identity Management Testing
+
     WSTG-IDNT-01 - Test Role Definitions
     WSTG-IDNT-02 - Test User Registration Process
     WSTG-IDNT-03 - Test Account Provisioning Process
@@ -34,6 +37,7 @@
     WSTG-IDNT-05 - Testing for Weak or Unenforced Username Policy
 
 #### WSTG-ATHN - Authentication Testing
+
     WSTG-ATHN-01 - Testing for Credentials Transported over an Encrypted Channel
     WSTG-ATHN-02 - Testing for Default Credentials
     WSTG-ATHN-03 - Testing for Weak Lock Out Mechanism
@@ -46,12 +50,14 @@
     WSTG-ATHN-10 - Testing for Weaker Authentication in Alternative Channel
 
 #### WSTG-ATHZ - Authorization Testing
+
     WSTG-ATHZ-01 - Testing Directory Traversal File Include
     WSTG-ATHZ-02 - Testing for Bypassing Authorization Schema
     WSTG-ATHZ-03 - Testing for Privilege Escalation
     WSTG-ATHZ-04 - Testing for Insecure Direct Object References
 
 #### WSTG-SESS - Session Management Testing
+
     WSTG-SESS-01 - Testing for Session Management Schema
     WSTG-SESS-02 - Testing for Cookies Attributes
     WSTG-SESS-03 - Testing for Session Fixation
@@ -64,6 +70,7 @@
     WSTG-SESS-10 - Testing JSON Web Tokens
 
 #### WSTG-INPV - Input Validation Testing
+
     WSTG-INPV-01 - Testing for Reflected Cross Site Scripting
     WSTG-INPV-02 - Testing for Stored Cross Site Scripting
     WSTG-INPV-03 - Testing for HTTP Verb Tampering
@@ -85,17 +92,19 @@
     WSTG-INPV-19 - Testing for Server-Side Request Forgery
 
 #### WSTG-ERRH - Error Handling
+
     WSTG-ERRH-01 - Testing for Improper Error Handling
     WSTG-ERRH-02 - Testing for Stack Traces
 
+#### WSTG-CRYP - Cryptography\*\*
 
-#### WSTG-CRYP - Cryptography**
     WSTG-CRYP-01 - Testing for Weak Transport Layer Securi
     WSTG-CRYP-02 - Testing for Padding Oracle
     WSTG-CRYP-03 - Testing for Sensitive Information Sent Via Unencrypted Channels
     WSTG-CRYP-04 - Testing for Weak Encryption
 
 #### WSTG-BUSLOGIC - Business Logic Testing
+
     WSTG-BUSL-01 - Test Business Logic Data Validation
     WSTG-BUSL-02 - Test Ability to Forge Requests
     WSTG-BUSL-03 - Test Integrity Checks
@@ -107,6 +116,7 @@
     WSTG-BUSL-09 - Test Upload of Malicious Files
 
 #### WSTG-CLIENT - Client-side Testing
+
     WSTG-CLNT-01 - Testing for DOM Based Cross Site Scripting
     WSTG-CLNT-02 - Testing for JavaScript Execution
     WSTG-CLNT-03 - Testing for HTML Injection
@@ -122,4 +132,5 @@
     WSTG-CLNT-13 - Testing for Cross Site Script Inclusion
 
 #### WSTG-APIT - API Testing
+
     WSTG-APIT-01 - Testing GraphQL
