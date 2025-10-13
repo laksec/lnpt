@@ -1,34 +1,59 @@
-# Jadapalli Lakshmaiah
+# 🌐 laksec — Bug Bounty Journey by Lakshman
 
-Bug Bounty Hunter | Security Researcher
+Welcome to **laksec**, My personal repository for all things bug bounty, ethical hacking, and cybersecurity learning.
 
-## About Me
+---
 
-I'm Jadapalli Lakshmaiah, Passionate about uncovering vulnerabilities and securing digital systems. I specialize in web application security, with hands-on experience in bug bounty hunting and cutting-edge security research.
+## 👨‍💻 About Me
 
-## Expertise
+Hi, I'm **Lakshman**, a curious learner from India who wants to explore and understand cybersecurity and bug bounty hunting. I document my practical learning, hands-on experiments, resources, and findings here — aiming to help myself and the community.
 
-- Web Application Security (XSS, SQLi, SSRF, IDOR, etc.)
-- Advanced Reconnaissance & Enumeration
-- Vulnerability Assessment & Exploitation
-- Bug Bounty Hunting (Actively participating in programs)
-- Researching Emerging Threats & Techniques
+---
 
-## Tools & Techniques
+## 📒 What You’ll Find Here
 
-- Proficient in Burp Suite, OWASP ZAP, Nmap, and custom scripts
-- Deep knowledge of HTTP protocols, APIs, and modern web frameworks
-- Exploring quantum-resistant security and AI-driven vuln detection
+- **Bug Bounty Notes**  
+  Step-by-step notes and guides about vulnerabilities, testing techniques, and hunting methodologies.
+- **Payloads & Scripts**  
+  Sample payloads, exploitation scripts, code snippets, and marked-down findings.
+- **Learning Logs**  
+  Regular dated entries summarizing progress, experiments, and takeaways.
+- **Resources & Tools**  
+  Curated lists of essential books, blogs, labs, YouTube channels, and online platforms.
 
-## Goals
+---
 
-- Contribute to secure software development
-- Share knowledge through write-ups and tools
-- Push the boundaries of web security research
+## 🗂️ Structure
 
-## Contact
+- `web-security.md` — Common web vulnerabilities and exploitation techniques
+- `network-attacks.md` — Network security basics, scanning, and attack notes
+- `tools.md` — Usage of Burp Suite, Caido, Nmap, and more
+- `learning-log.md` — Timeline-style log of progress and activities
+- `resources.md` — Best external links, labs, and reading material
 
-- Email: [lakshman.lnpt@gmail.com](mailto:lakshman.lnpt@gmail.com)
-- LinkedIn: [https://www.linkedin.com/in/laksec/](https://www.linkedin.com/in/laksec/)
+---
 
-Happy Hunting!
+## 🎯 Goals
+
+- Deepen understanding of bug bounty hunting and defensive security
+- Maintain a journal for self-improvement and review
+- Share actionable knowledge with fellow learners and professionals
+
+---
+
+## 📢 Contribution
+
+Feel free to open issues, suggest improvements, or fork this repo to start your own journey. Star ⭐ the repo if you find it helpful!
+
+---
+
+## 📬 Contact
+
+<!-- - Twitter: `@laksec` -->
+
+- Email: lakshman.jdp@gmail.com
+- GitHub: [laksec](https://github.com/laksec)
+
+---
+
+> _Stay curious. Hack ethically. Document everything!_
