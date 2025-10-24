@@ -42,7 +42,7 @@
     # Wordlists for security testing
     sudo apt  install seclists
 
-    # Use the `--depth 1` version (SecLists is a collection of wordlists, not a software project I need. I only care about the current set of lists, not what the lists looked like 5 years ago.):
+    # --depth 1 removes .git file which is huge
     git clone --depth 1 https://github.com/danielmiessler/SecLists.git
 
     # Lightweight DNS server
