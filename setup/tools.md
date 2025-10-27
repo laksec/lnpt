@@ -39,6 +39,8 @@
 
 ### Apt Instalation
 
+    sudo apt install firefox-esr
+
     # Wordlists for security testing
     sudo apt  install seclists
 
