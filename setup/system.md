@@ -42,23 +42,24 @@
 
     # ln -s /mnt/d/work ~/j
 
-    alias cddefault='cd /mnt/d/work'
-    alias cdws='cd /mnt/d/work/ws'
-    alias cdtool='cd /mnt/d/work/tools'
-    alias cdlnpt='cd /mnt/d/work/tools/lnpt'
-    alias cdfiles='cd /mnt/d/work/files'
+    alias cdenv='cd /mnt/d/penv'
+    alias cdws='cd /mnt/d/ws'
+    alias cdlnpt='cd /mnt/d/penv/lnpt'
 
     alias cddownload='cd /mnt/d/download'
+
+    alias srcpy3="source /mnt/d/penv/py3/.py3/bin/activate"
+    alias cdpy3="cd /mnt/d/penv/py3"
 
     alias emptyHistory='sudo echo "" > ~/.zsh_history'
     alias openHistory='sudo nano ~/.zsh_history'
 
-    alias codelnpt='code /mnt/d/work/tools/lnpt'
+    alias codelnpt='code /mnt/d/penv/lnpt'
 
     alias kupgrade='sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y'
 
-    alias openZsh='sudo nano ~/.zshrc'
-    alias srcZsh='source ~/.zshrc'
+    alias openzsh='sudo nano ~/.zshrc'
+    alias srczsh='source ~/.zshrc'
 
     export PATH=$PATH:/mnt/c/Program\ Files/Sublime\ Text
     alias subl='/mnt/c/Program\ Files/Sublime\ Text/subl.exe'
@@ -73,6 +74,10 @@
 
     # Ubuntu Prompt
     PS1="\[\e[32m\]┌─(\[\e[0m\]Web3\[\e[32m\])-[\[\e[34m\]\w\[\e[0m\]\[\e[32m\]]\[\e[0m\]\n\[\e[32m\]└─$\[\e[0m\] "
+
+    cd /mnt/d/work/ws && clear
+
+    echo -e "\n\e[97;44mWeb Application - Bug Bounty Hunting\e[0m\n"
 
 ---
 
