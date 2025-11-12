@@ -28,14 +28,14 @@
     2.13 Test for Path Confusion
     2.14 Test for Other HTTP Security Header Misconfigurations
 
-### 3 Identity Management Testing
+### 3_Identity_Management_Testing
     3.1 Test Role Definitions
     3.2 Test User Registration Process
     3.3 Test Account Provisioning Process
     3.4 Testing for Account Enumeration and Guessable User Account
     3.5 Testing for Weak or Unenforced Username Policy
 
-### 4_Authentication Testing
+### 4_Authentication_Testing
     4.1 Testing for Credentials Transported over an Encrypted Channel
     4.2 Testing for Default Credentials
     4.3 Testing for Weak Lock Out Mechanism
