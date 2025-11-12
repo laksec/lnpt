@@ -13,7 +13,7 @@ find ~/lnpt -type f -name "*.md" -exec rename 's/\.md$/.sh/' {} +
 for f in *.txt; do mv -- "$f" "${f%.txt}.csv"; done
 
 # 3. Find and delete empty files
-find . -type f -empty -delete
+find  -type f -empty -delete
 
 # 4. Find and compress large files
 find /path -type f -size +10M -exec gzip {} +
@@ -24,7 +24,7 @@ tar -czvf "backup-$(date +%Y%m%d).tar.gz" /important/files
 ### 2. TEXT PROCESSING (25+ Techniques) ###
 
 # 1. Find API keys in codebase
-find . -type f \( -name "*.js" -o -name "*.py" \) -exec grep -EHn "(api|access)_?key" {} \;
+find  -type f \( -name "*.js" -o -name "*.py" \) -exec grep -EHn "(api|access)_?key" {} \;
 
 # 2. Extract all URLs from files
 grep -Ero 'https?://[^/" ]+' /path | sort -u
@@ -78,7 +78,7 @@ inotifywait -m -r -e modify,create,delete /path/to/watch
 csvtojson input.csv > output.json
 
 # 2. Convert XML to JSON
-xq . file.xml > file.json
+xq  file.xml > file.json
 
 # 3. Base64 encode/decode
 cat file | base64 -w0 | base64 -d
@@ -145,7 +145,7 @@ cat large.txt | grep "pattern" | sponge large.txt
 cat urls.txt | parallel -j 20 "curl -s {} | wc -c"
 
 # 3. Keep commands running after logout
-nohup ./long_running_script.sh &
+nohup /long_running_script.sh &
 
 # 4. Quick file transfer
 nc -lvnp 4444 > file.out  # Receiver

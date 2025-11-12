@@ -27,7 +27,7 @@ python3 oledump.py file.pptx               # PowerPoint analysis
 exiftool -csv -r ~/Downloads > metadata.csv
 
 # Find documents from specific creator:
-find . -type f -exec exiftool {} + | grep -i "Author: John Doe"
+find  -type f -exec exiftool {} + | grep -i "Author: John Doe"
 
 # 4. REMOVAL TOOLS
 # ================
@@ -74,7 +74,7 @@ exiftool suspicious.pdf | grep -i "creator\|modified"
 exiftool -r -GPSLatitude -GPSLongitude -n ~/Pictures
 
 # 3. Clean Sensitive Files
-find . -name "*.docx" -exec mat2 --inplace {} \;
+find  -name "*.docx" -exec mat2 --inplace {} \;
 
 # 4. Detect Fake Files
 file --keep-going * | grep "Microsoft Word" | grep -v "DOCX"

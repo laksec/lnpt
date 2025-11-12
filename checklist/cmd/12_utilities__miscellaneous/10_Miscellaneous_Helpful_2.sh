@@ -55,7 +55,7 @@ find / -xdev -type f -printf "%T+ %p\n" 2>/dev/null | sort | tail -n 50
 ### 5. DATA TRANSFORMATION WIZARDRY (40+ Methods) ###
 
 # 5.1 Nested JSON to CSV conversion
-cat nested.json | jq -r '.users[] | [.id, .name, (.devices[]? | .model)] | @csv' > devices.csv
+cat nested.json | jq -r '.users[] | [.id, name, (.devices[]? | model)] | @csv' > devices.csv
 
 # 5.2 Binary protocol analysis
 xxd -g1 firmware.bin | awk '{for(i=2;i<18;i++) printf $i" "; print ""}' | grep -P "ff d8 ff e[0-9]"
@@ -80,10 +80,10 @@ grep -r "docker\|lxc" /proc/1/cgroup || echo "Not containerized"
 cat targets.txt | parallel -j 20 "nmap -Pn -sV -T4 {} -oN scan_{#}.txt"
 
 # 7.2 Dynamic workflow with error handling
-while read url; do curl -fs "$url" || echo "$url failed" >> errors.log; done < urls.txt | parallel -j 10 ./analyze.sh
+while read url; do curl -fs "$url" || echo "$url failed" >> errors.log; done < urls.txt | parallel -j 10 /analyze.sh
 
 # 7.3 Conditional task execution
-[ -f preflight.complete ] && ./main_scan.sh || { ./preflight.sh && touch preflight.complete && ./main_scan.sh; }
+[ -f preflight.complete ] && /main_scan.sh || { /preflight.sh && touch preflight.complete && /main_scan.sh; }
 
 ### 8. MEMORY FORENSICS (40+ Commands) ###
 
@@ -168,7 +168,7 @@ frida -U -f com.app.name -l intercept.js
 nmap -oX scan.xml target.com && xsltproc scan.xml -o report.html && wkhtmltopdf report.html final_report.pdf
 
 # 15.2 Vulnerability dashboard creation
-cat findings.json | jq -r '.[] | [.severity, .name, .host] | @tsv' | awk -F'\t' '{print $1 "\t" $2 "\t" $3}' | column -t -s $'\t'
+cat findings.json | jq -r '.[] | [.severity, name, host] | @tsv' | awk -F'\t' '{print $1 "\t" $2 "\t" $3}' | column -t -s $'\t'
 
 # 15.3 Timeline visualization
 log2timeline.py plaso.dump /evidence && psort.py -o dynamic -w timeline.html plaso.dump

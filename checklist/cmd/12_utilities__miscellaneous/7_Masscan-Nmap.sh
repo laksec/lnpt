@@ -53,7 +53,7 @@ nmap --min-rate 1000 --max-rate 5000 --max-retries 2 --min-hostgroup 100 -iL big
 ### 4. CLOUD-SCALE SCANNING (15+ Methods) ###
 
 # 4.1 AWS VPC Scanning (Authorized)
-aws ec2 describe-instances | jq -r '.Reservations[].Instances[] | .PublicIpAddress' | \
+aws ec2 describe-instances | jq -r '.Reservations[].Instances[] | PublicIpAddress' | \
 xargs -P 20 masscan -p80,443 --rate 10000
 
 # 4.2 GCP Asset Discovery
@@ -79,14 +79,14 @@ masscan-optimizer --input previous_scans/ --output optimal_params.json
 
 # Enterprise-Grade Scanning Pipeline
 masscan 10.0.0.0/8 -p1-65535 --rate 500K -oJ masscan.json && \
-jq -r '.ip + " " + (.ports[] | .port | tostring)' masscan.json | \
+jq -r '.ip + " " + (.ports[] | port | tostring)' masscan.json | \
 sort -u | parallel -j 20 --colsep ' ' nmap -sS -sV -T4 -A -oN {1}-{2}.txt -p{2} {1}
 
 # Cloud Asset Discovery Engine
 cloudscanner --providers aws,gcp,azure --regions all --ports web --rate 1M --output scans/
 
 # AI-Driven Adaptive Scanning
-scan-ai --targets 10.0.0.0/16 --model ./scan_model.h5 --output adaptive_scans/
+scan-ai --targets 10.0.0.0/16 --model /scan_model.h5 --output adaptive_scans/
 
 ### PRO TIPS ###
 

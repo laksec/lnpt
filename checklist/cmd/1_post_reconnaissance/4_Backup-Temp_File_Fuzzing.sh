@@ -3,7 +3,7 @@
     # 1. COMPREHENSIVE BACKUP SCAN (All common extensions)
     ffuf -w /usr/share/seclists/Discovery/Web-Content/raft-medium-files.txt \
     -u https://target.com/FUZZ \
-    -e .bak,.old,.zip,.tar.gz,.sql,.conf,.config,.swp,~,.backup,.bkp,.save,.orig,.copy \
+    -e bak,.old,.zip,.tar.gz,.sql,.conf,.config,.swp,~,.backup,.bkp,.save,.orig,.copy \
     -t 150 \
     -mc 200,403 \
     -o ffuf_backup_scan.json \
@@ -12,7 +12,7 @@
     # 2. TARGETED FILENAME SCAN (Common sensitive files)
     ffuf -w /usr/share/seclists/Discovery/Web-Content/Common-DB-Backups.txt \
     -u https://target.com/FUZZ \
-    -e .bak,.old,.sql \
+    -e bak,.old,.sql \
     -t 100 \
     -mc 200 \
     -o ffuf_sensitive_backups.json
@@ -54,7 +54,7 @@
     # 3. CASE VARIATIONS
     # Check case-sensitive backups
     cat common_files.txt | while read file; do
-    for ext in .BAK .OLD .Backup; do
+    for ext in BAK OLD Backup; do
         curl -s -o /dev/null -w "%{http_code} $file$ext\n" "https://target.com/$file$ext" | grep -v "404"
     done
     done
@@ -62,7 +62,7 @@
     # PRO TIPS:
     # 1. Always check both with and without extensions
     # 2. Try prepending/appending version numbers (v1, _old)
-    # 3. Check for compressed versions (.gz, .zip, .tar)
+    # 3. Check for compressed versions (.gz, zip, tar)
     # 4. Look for developer naming patterns (final, test, temp)
     # 5. Combine with waybackurls for historical backups
 

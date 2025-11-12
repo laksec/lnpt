@@ -47,11 +47,11 @@
 
     # 2. XSS TESTING
     # Find reflected parameters
-    cat form_details.json | jq -r '.[] | select(.method == "GET") | .action + "?" + (.inputs[] | select(.type != "hidden") | .name + "=XSS")'
+    cat form_details.json | jq -r '.[] | select(.method == "GET") | action + "?" + (.inputs[] | select(.type != "hidden") | name + "=XSS")'
 
     # 3. SQLi TESTING
     # Identify potential injection points
-    cat form_details.json | jq -r '.[] | select(.method == "POST") | .action + " (params: " + (.inputs | map(.name) | join(",")) + ")"'
+    cat form_details.json | jq -r '.[] | select(.method == "POST") | action + " (params: " + (.inputs | map(.name) | join(",")) + ")"'
 
     # ======================
     # PRO TIPS:

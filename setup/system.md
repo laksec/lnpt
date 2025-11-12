@@ -30,7 +30,7 @@
 
     wget -O install-nethunter-termux https://offs.ec/2MceZWr
     chmod +x install-nethunter-termux
-    ./install-nethunter-termux
+    /install-nethunter-termux
 
     nethunter/nh          -> Start Kali NetHunter command line interface
     nh <command>          -> Run <command> in Kali NetHunter environment

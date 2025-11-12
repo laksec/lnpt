@@ -410,7 +410,7 @@
     jq -r '.results[] | select(.similarity < 85) | "\(.url) - \(.status) - \(.content_length)"' ffuf_results.json
 
     # Find unique responses:
-    jq -r '.results[] | select(.similarity < 60) | .url' ffuf_results.json | sort -u
+    jq -r '.results[] | select(.similarity < 60) | url' ffuf_results.json | sort -u
 
     # Advanced Techniques:
     # Create baseline hashes for different error types
@@ -479,7 +479,7 @@ grep -E -i '(api[_-]?key|secret|token|password)' detailed_errors.txt
 # Java: Exception in thread "main" java.lang.NullPointerException
 # PHP: Fatal error: Uncaught Error: Call to undefined function
 # Python: Traceback (most recent call last):
-# .NET: System.NullReferenceException: Object reference not set
+# NET: System.NullReferenceException: Object reference not set
 # Database: SQLSTATE[42S22]: Column not found
 # File paths: /var/www/html/config.php on line 42
 # API keys: "api_key": "12345-abcdef"

@@ -101,7 +101,7 @@ subfinder -d target.com | httpx -silent | nuclei -t cves/ -t exposures/ -c 50 -o
 cloud_enum -k target | grep 's3' | aws s3 ls s3:// --no-sign-request | tee buckets.txt
 
 # 3. Dark Web Monitoring
-torify darkdump search "target.com" --limit 100 | jq '.results[] | .link' | httpx -status-code -title
+torify darkdump search "target.com" --limit 100 | jq '.results[] | link' | httpx -status-code -title
 
 ### PRO TIPS ###
 

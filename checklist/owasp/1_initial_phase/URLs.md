@@ -52,11 +52,11 @@
     - Test IPv4 vs IPv6 differences
     - Verify subdomain manipulation
     - Check wildcard DNS abuse
-    - Test TLD impersonation (.com vs .co)
+    - Test TLD impersonation (.com vs co)
 
 ### 📁 PATH TRAVERSAL
 
-    - Test basic ../ sequences
+    - Test basic ./ sequences
     - Verify encoded traversal (%2e%2e%2f)
     - Check absolute path injection (/etc/passwd)
     - Test Windows path variations (..\)

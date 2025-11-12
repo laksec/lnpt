@@ -27,7 +27,7 @@ nmap --script arp-scan --script-args arp-scan.timeout=5s
 
 # 3. Cutting-Edge Service Detection (40+ Methods)
 # Deep Learning Version Detection
-nmap -sV --version-intensity 9 --version-all --ml-model ./nmap_model.h5
+nmap -sV --version-intensity 9 --version-all --ml-model /nmap_model.h5
 
 # TLS 1.3 Cryptographic Audit
 nmap -p443 --script ssl-enum-ciphers --script-args tls.version=1.3,ciphers=all
@@ -59,7 +59,7 @@ nmap --time-warp --jitter 1s-5m --packet-trace -T paranoid
 nmap -sS --proxies socks4://127.0.0.1:9050 --spoof-mac Cisco --ip-options "\"RR\" \"0\" \"0\" \"0\""
 
 # AI-Generated Decoy Traffic
-nmap -D ml-generated:10 --decoy-model ./traffic_model.h5
+nmap -D ml-generated:10 --decoy-model /traffic_model.h5
 
 # Blockchain-Anonymized Scanning
 nmap --anon-service=ethereum --anon-payment=0.01ETH -T7
@@ -75,7 +75,7 @@ nmap --script k8s-enum --script-args k8s.token=$(kubectl get secrets)
 nmap -Pn --script serverless-finder --script-args cloud.provider=aws
 
 # FPGA Accelerated Scanning
-nmap --fpga-accel --fpga-image ./scanning.xclbin -T insane
+nmap --fpga-accel --fpga-image /scanning.xclbin -T insane
 
 # 7. Advanced Reporting & Automation (30+ Methods)
 # AI-Generated Executive Reports
@@ -88,7 +88,7 @@ nmap-looper --interval 1h --targets dynamic.txt --trend-analysis
 nmap -oA scan --git-commit --git-branch security-scans
 
 # MLOps-Enabled Scanning
-nmap-mlops --model-retrain --training-data ./previous_scans/
+nmap-mlops --model-retrain --training-data /previous_scans/
 
 # 8. Red Team Special Forces Tactics (20+ Techniques)
 # Zero-Trace Memory Scanning

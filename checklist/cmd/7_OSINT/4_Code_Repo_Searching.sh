@@ -13,11 +13,11 @@ curl -H "Authorization: token $GITHUB_TOKEN" "https://api.github.com/search/code
 # 2. LOCAL REPO SCANNING
 # ======================
 # Find secrets:
-grep -r --include='*.env' 'API_KEY' .                         # Env files
+grep -r --include='*.env' 'API_KEY'                          # Env files
 rg -i 'password|secret|key' --glob '*.{yml,json}'             # Ripgrep
 
 # Dependency vulnerabilities:
-grep -r --include='package.json' '"dependencies"' . | jq      # NPM
+grep -r --include='package.json' '"dependencies"'  | jq      # NPM
 rg 'gem' --glob 'Gemfile'                                     # Ruby
 
 # 3. GIT HISTORY MINING
@@ -31,7 +31,7 @@ git grep -n 'AWS_ACCESS_KEY' $(git rev-list --all)            # All revisions
 trufflehog git file://. --only-verified
 
 # Gitleaks (configurable rules):
-gitleaks detect -v --source .
+gitleaks detect -v --source 
 
 # Repo-supervisor (multi-repo):
 repo-supervisor --config config.yml
@@ -51,7 +51,7 @@ curl -H "PRIVATE-TOKEN: $GITLAB_TOKEN" "https://gitlab.com/api/v4/projects/123/r
 gh secret scan -R org/repo
 
 # Check for sensitive files:
-find . -name '*.pem' -o -name '*.key' -o -name '.env'
+find  -name '*.pem' -o -name '*.key' -o -name '.env'
 
 # 7. AUTOMATION
 # =============

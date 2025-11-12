@@ -138,7 +138,7 @@
 
     # 3. Combine with common extensions
     cat disallowed.txt | while read path; do
-    for ext in .bak .old .txt .json; do
+    for ext in bak old txt json; do
         curl -s -o /dev/null -w "%{http_code} - $path$ext\n" "https://target.com$path$ext"
     done
     done > extended_checks.txt

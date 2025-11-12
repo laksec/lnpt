@@ -92,18 +92,18 @@ cloud_enum -k example | grep 's3' | aws s3 ls s3:// --no-sign-request | tee buck
 for b in $(cat buckets.txt); do aws s3 cp s3://$b - | grep -E 'AKIA|secret'; done
 
 # 3. Dark Web Monitoring Pipeline
-torify python3 darkdump.py search "example.com" --limit 100 | jq '.results[] | .link' | httpx -status-code -title
+torify python3 darkdump.py search "example.com" --limit 100 | jq '.results[] | link' | httpx -status-code -title
 
 ### DATA ANALYSIS POWERTOOLS ###
 
 # 1. jq for JSON Processing
-cat response.json | jq 'walk(if type == "object" then with_entries(select(.key | test("pass|token|key"; "i"))) else . end)'
+cat response.json | jq 'walk(if type == "object" then with_entries(select(.key | test("pass|token|key"; "i"))) else  end)'
 
 # 2. Miller for CSV/TSV
 mlr --csv filter '$status == 200 && $length > 1000' scan_results.csv | mlr --csv sort -n hits
 
 # 3. yq for YAML
-yq e '.services[] | select(.port == 80 or .port == 443) | .host' docker-compose.yml
+yq e '.services[] | select(.port == 80 or port == 443) | host' docker-compose.yml
 
 # 4. xsv for Blazing Fast CSV
 xsv stats huge.csv | xsv table

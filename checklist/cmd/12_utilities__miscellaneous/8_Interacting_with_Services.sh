@@ -115,7 +115,7 @@ docker -H tcp://target.com:2375 ps -a
 ### MEGA WORKFLOWS ###
 
 # 1. Full API Testing Chain
-curl -s https://api.target.com/v1/users | jq '.[] | .id' | parallel -j 20 "curl -s https://api.target.com/v1/users/{} | jq"
+curl -s https://api.target.com/v1/users | jq '.[] | id' | parallel -j 20 "curl -s https://api.target.com/v1/users/{} | jq"
 
 # 2. Automated Service Enumeration
 nmap -sV -p- -oA services target.com

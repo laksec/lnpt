@@ -18,17 +18,17 @@
 
 ## 2.3 File Extensions Handling
     -  Test for sensitive files (.env, config.json)
-    -  Check source code exposure (.php, .jsp)
+    -  Check source code exposure (.php, jsp)
     -  Verify proper handling of double extensions
     -  Test for directory listing vulnerabilities
     -  Check for exposed git/version control files
 
 ## 2.4 Backup and Unreferenced Files
-    -  Search for common backup patterns (.bak, ~, .old)
-    -  Check for temporary files (.tmp, .swp)
-    -  Verify IDE/editor artifacts (.idea, .vscode)
-    -  Test for compiled file exposure (.class, .pyc)
-    -  Check for database dumps (.sql, .mdb)
+    -  Search for common backup patterns (.bak, ~, old)
+    -  Check for temporary files (.tmp, swp)
+    -  Verify IDE/editor artifacts (.idea, vscode)
+    -  Test for compiled file exposure (.class, pyc)
+    -  Check for database dumps (.sql, mdb)
 
 ## 2.5 Admin Interfaces Enumeration
     -  Scan for common admin paths (/admin, /manager)

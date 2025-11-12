@@ -70,7 +70,7 @@
 
 ## 10.8 Test Upload of Unexpected File Types
 ### File Validation
-    - Upload disguised files (e.g., .exe as .jpg)
+    - Upload disguised files (e.g., exe as jpg)
     - Test oversized files (> defined limits)
     - Verify metadata stripping (EXIF, macros)
     - Check virus scanning implementation

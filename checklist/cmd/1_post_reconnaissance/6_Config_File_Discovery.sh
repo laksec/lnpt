@@ -48,7 +48,7 @@
 
     # 2. BACKUP VERSIONS CHECK
     cat common_configs.txt | while read file; do
-    for ext in .bak .old .orig; do
+    for ext in bak old orig; do
         curl -s -o /dev/null -w "%{http_code} $file$ext\n" "https://target.com/$file$ext" | grep -v "404"
     done
     done > config_backups.txt
@@ -63,8 +63,8 @@
     # PRO TIPS:
     # 1. Always check both with and without leading dots
     # 2. Try prepending/appending version numbers (v1, _old)
-    # 3. Check for compressed versions (.gz, .zip, .tar)
-    # 4. Look for developer naming patterns (config-dev, .env.local)
+    # 3. Check for compressed versions (.gz, zip, tar)
+    # 4. Look for developer naming patterns (config-dev, env.local)
     # 5. Combine with waybackurls for historical config files
 
     # RECOMMENDED WORDLISTS:

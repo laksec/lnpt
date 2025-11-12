@@ -59,7 +59,7 @@
     - Test for config file tampering
     - Verify env variable injection
     - Check for registry manipulation
-    - Test for .htaccess abuse
+    - Test for htaccess abuse
     - Verify YAML/JSON parsing flaws
     - Check for XML external entities
     - Test for INI file injection
@@ -71,7 +71,7 @@
 
     - Test PHP object injection
     - Verify Java deserialization
-    - Check .NET serialization
+    - Check NET serialization
     - Test Python pickle abuse
     - Verify Ruby Marshal flaws
     - Check Node.js serialize-javascript

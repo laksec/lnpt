@@ -41,7 +41,7 @@ john --restore=cracking.session
 ### 3. ADVANCED CRACKING (20+ Methods) ###
 
 # 3.1 Rainbow Table Attack
-rcrack . -l hashes.txt
+rcrack  -l hashes.txt
 
 # 3.2 Distributed Cracking
 ./psubcrack.py -n 4 -f hashes.txt -w rockyou.txt

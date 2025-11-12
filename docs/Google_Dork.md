@@ -39,7 +39,7 @@
     daterange:   - Date range search                   (daterange:20200101-20201231)
 
 ### NUMERIC RANGES
-    ..           - Number range                        (price $100..$500)
+    .           - Number range                        (price $100..$500)
     in           - Unit conversion                     (100m in feet)
 
 ### SPECIALIZED SEARCHES
@@ -94,7 +94,7 @@
 
 ### Boolean Logic
     AND OR NOT  |  & + - "exact phrase"  (grouping) 
-    ..  (range) *  (wildcard) ~  (synonym) 
+    .  (range) *  (wildcard) ~  (synonym) 
 
 ### Advanced Operators
     inanchor: inpostauthor: inposttitle: blogurl:
@@ -138,7 +138,7 @@
     config | configuration | backup | restore | dump | upload | download | export | import | migrate | install | setup | update | upgrade | patch | hotfix | temp | tmp | cache | session
 
 ### Version Control
-    git | svn | hg | gitlab | github | bitbucket | repo | repository | .git | .svn | .hg | .bzr | .cvs | .DS_Store | .idea | .vscode | .project | .classpath | .settings | nbproject
+    git | svn | hg | gitlab | github | bitbucket | repo | repository | git | svn | hg | bzr | cvs | DS_Store | idea | vscode | project | classpath | settings | nbproject
 
 ## TITLE OPERATORS  (200+)
 

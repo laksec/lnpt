@@ -47,7 +47,7 @@
 
     # 4. POST-DISCOVERY VERIFICATION
     # Validate found VHOSTs
-    cat vhosts.json | jq -r '.results[] | .input.FUZZ' | while read vhost; do
+    cat vhosts.json | jq -r '.results[] | input.FUZZ' | while read vhost; do
     echo -n "$vhost: "
     curl -s -I -H "Host: $vhost.target.com" http://TARGET_IP | head -n 1
     done > vhost_validation.txt

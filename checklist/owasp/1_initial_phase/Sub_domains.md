@@ -31,7 +31,7 @@
     - Check common admin paths (/admin, /backup)
     - Verify API documentation endpoints
     - Search for config files (.env, config.php)
-    - Examine backup files (.bak, .old, .zip)
+    - Examine backup files (.bak, old, zip)
     - Check for exposed git repositories (.git)
     - Verify temporary files (/tmp, /uploads)
     - Search for log files (access.log, error.log)
@@ -55,7 +55,7 @@
     - Test path traversal vulnerabilities
     - Examine symbolic link possibilities
     - Search for hardcoded credentials
-    - Check for .htaccess misconfigurations
+    - Check for htaccess misconfigurations
     - Verify web server type (Apache/Nginx/IIS)
     - Examine server status pages (/server-status)
     - Search for phpinfo() exposure

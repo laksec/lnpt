@@ -54,7 +54,7 @@
     cat discovered_params.txt | grep -E 'id=[0-9]+'
 
     # 2. JQ PROCESSING FOR ARJUN RESULTS
-    jq -r '.results[] | .url + "?" + (.params | join("&"))' arjun_results.json
+    jq -r '.results[] | url + "?" + (.params | join("&"))' arjun_results.json
 
     # 3. WAYBACK PARAMETER MINING
     waybackurls target.com | grep -E '\?.+=' | unfurl keys | sort -u
@@ -155,7 +155,7 @@
     # true/false
     # 1/0
     # admin/user
-    # ../../ (path traversal)
+    # ./../ (path traversal)
     # <script>alert(1)</script> (XSS test)
 
     # EXAMPLE WORKFLOW:

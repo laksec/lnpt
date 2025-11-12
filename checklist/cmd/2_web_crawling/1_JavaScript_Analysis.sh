@@ -104,7 +104,7 @@
     # 5. Check vulnerabilities with Retire.js
 
     # Combine with nuclei for vulnerability scanning: cat endpoints.json | nuclei -t exposures/
-    # Use jq to process JSON results: jq '.results[] | .url' linkfinder_output.json
+    # Use jq to process JSON results: jq '.results[] | url' linkfinder_output.json
     # Monitor for changes: watch -n 3600 getjs --url https://target.com -o js_monitor/
     # Create custom regex patterns for target-specific patterns
 

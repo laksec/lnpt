@@ -1,7 +1,7 @@
 ### 11.2 Workflow Automation
     # (Conceptual - many custom scripts exist)    
-    ./my_recon_script.sh target.com
-    ./full_scan_automation.sh target.com -o /reports/target_com_$(date +%F)
+    /my_recon_script.sh target.com
+    /full_scan_automation.sh target.com -o /reports/target_com_$(date +%F)
 
     bugbounty-auto -c config.yaml -t target.com -o output/
     reconftw -d target.com -a -r -w -o reconftw_output

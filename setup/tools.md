@@ -47,7 +47,7 @@
     # Wordlists for security testing
     sudo apt  install seclists
 
-    # --depth 1 removes .git file which is huge
+    # --depth 1 removes git file which is huge
     git clone --depth 1 https://github.com/danielmiessler/SecLists.git
 
     # Lightweight DNS server

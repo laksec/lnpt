@@ -1,7 +1,7 @@
 # 🔐 AUTHORIZATION TESTING MASTER CHECKLIST
 
 ## 5.1 Testing Directory Traversal/File Include
-    - Test path traversal using ../ sequences
+    - Test path traversal using ./ sequences
     - Verify absolute path blocking (e.g., /etc/passwd)
     - Check for null byte injection (%00)
     - Test encoded traversal attempts (URL, double URL, UTF-8)

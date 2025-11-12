@@ -1,6 +1,6 @@
 #### 2.2.5 Source Code/VCS Exposure Discovery
     # 1. GIT REPOSITORY DISCOVERY & DUMPING
-    # Check for exposed .git
+    # Check for exposed git
     ffuf -w /usr/share/seclists/Discovery/Web-Content/git.txt \
     -u https://target.com/FUZZ \
     -t 100 \
@@ -11,7 +11,7 @@
     git-dumper https://target.com/.git/ git_dump --threads 10
 
     # 2. SVN REPOSITORY DISCOVERY
-    # Check for exposed .svn
+    # Check for exposed svn
     ffuf -w /usr/share/seclists/Discovery/Web-Content/svn.txt \
     -u https://target.com/FUZZ \
     -t 100 \
@@ -22,14 +22,14 @@
     svn export http://target.com/.svn/ svn_dump --force
 
     # 3. DS_STORE FILES
-    # Find exposed .DS_Store
+    # Find exposed DS_Store
     ffuf -w /usr/share/seclists/Discovery/Web-Content/dsstore.txt \
     -u https://target.com/FUZZ \
     -t 100 \
     -mc 200,403 \
     -o ds_store_scan.json
 
-    # Parse found .DS_Store
+    # Parse found DS_Store
     ds_store_parser http://target.com/.DS_Store -o parsed_ds_store.txt
 
     # 4. COMPREHENSIVE VCS SCAN

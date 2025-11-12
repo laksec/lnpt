@@ -12,7 +12,7 @@
     scoutsuite aws --profile myawscli_profile --report-dir scout_aws_report/ 
     
     # Using temporary credentials
-    scoutsuite aws --access-key-id AKIA... --secret-access-key ... --session-token ... 
+    scoutsuite aws --access-key-id AKIA... --secret-access-key .. --session-token .. 
     
     # Import AWS keys into Pacu
     pacu --import-keys --key-alias mycorp

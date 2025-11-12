@@ -40,7 +40,7 @@
     - Check AWS credential files
     - Test database configuration files
     - Verify source code disclosure
-    - Check .htaccess retrieval
+    - Check htaccess retrieval
     - Test environment file access
 
 ### 🌍 REMOTE FILE INCLUSION (RFI)
@@ -173,7 +173,7 @@
     - Check GCP metadata
     - Test Kubernetes configs
     - Verify Docker socket access
-    - Check .env files
+    - Check env files
     - Test CI/CD configurations
     - Verify Terraform state
     - Check cloud credentials

@@ -234,7 +234,7 @@
     - Attempt to access internal Varnish admins.
     - Probe for internal Redis commanders.
     - Check for internal PHP-FPM status pages.
-    - Attempt to access internal .NET debug endpoints.
+    - Attempt to access internal NET debug endpoints.
 
 ### ENTERPRISE SERVICE TESTS
 

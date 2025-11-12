@@ -1,7 +1,7 @@
 ## Web Application Security Testing
 
 ### 1 Information Gathering
-    1.1 Conduct Search Engine Discovery Reconnaissance for Information Leakage
+    1.1 Search Engine Discovery Reconn for Information Leakage
     1.2 Fingerprint Web Server
     1.3 Review Webserver Metafiles for Information Leakage
     1.4 Enumerate Applications on Webserver

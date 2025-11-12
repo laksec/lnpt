@@ -73,7 +73,7 @@ csrf-scanner -u https://target.com -c cookies.txt -o report.html
 csrf-suite --spider https://target.com --auth admin:password --deep-scan
 
 # 6.3 AI-Powered CSRF Detection
-ai-csrf-detector --model ./csrf-model.h5 --urls urls.txt
+ai-csrf-detector --model /csrf-model.h5 --urls urls.txt
 
 # 7. Specialized CSRF Attacks (15+ Scenarios)
 # 7.1 PDF-Based CSRF

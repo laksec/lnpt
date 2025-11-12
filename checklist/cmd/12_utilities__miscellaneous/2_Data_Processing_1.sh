@@ -62,7 +62,7 @@ python3 -c "import urllib.parse; print(urllib.parse.quote(input()))" <<< "admin'
 echo "𝕏𝕊𝕊" | iconv -f utf-8 -t utf-16le | hexdump -C
 
 # 4. JWT
-jq -R 'split(".") | .[1] | @base64d | fromjson' <<< "$JWT_TOKEN"
+jq -R 'split(".") | [1] | @base64d | fromjson' <<< "$JWT_TOKEN"
 
 # 5. HTML Entities
 echo "&lt;script&gt;" | recode html..ascii

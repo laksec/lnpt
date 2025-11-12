@@ -32,13 +32,13 @@ wsfuzzer -u https://target.com/soap -e enum -d payloads.xml
 ### 3. BINARY FUZZING (15+ Commands) ###
 
 # 3.1 AFL++ Basic Fuzzing
-afl-fuzz -i input/ -o findings/ -m none -t 1000 -- ./target @@
+afl-fuzz -i input/ -o findings/ -m none -t 1000 -- /target @@
 
 # 3.2 Memory Sanitizer Build
 clang -fsanitize=address,fuzzer -o fuzzer fuzzer.c
 
 # 3.3 Structure-Aware Fuzzing
-afl-fuzz -i in -o out -x dict.xml -- ./parser @@
+afl-fuzz -i in -o out -x dict.xml -- /parser @@
 
 ### 4. PROTOCOL FUZZING (10+ Techniques) ###
 
@@ -57,7 +57,7 @@ tlsfuzzer -connect target.com:443 -tests invalid_ciphers
 cat input.txt | radamsa -n 100 -o mutated-%n.txt
 
 # 5.2 Zzuf Random Fuzzing
-zzuf -r 0.1 -s 0:1000 ./program < input.txt
+zzuf -r 0.1 -s 0:1000 /program < input.txt
 
 # 5.3 Peach Pit Transformation
 peach -pit pits/http.xml -target http -run 1
@@ -74,8 +74,8 @@ arjun -u https://api.target.com -o params.json && \
 ffuf -u https://api.target.com?FUZZ=test -w params.json -fs 0 -o api_fuzz.json
 
 # Continuous Binary Fuzzing
-afl-fuzz -i in -o out -S fuzzer1 -- ./program @@ & \
-afl-fuzz -i in -o out -S fuzzer2 -- ./program @@ & \
+afl-fuzz -i in -o out -S fuzzer1 -- /program @@ & \
+afl-fuzz -i in -o out -S fuzzer2 -- /program @@ & \
 afl-whatsup out/
 
 ### PRO TIPS ###
@@ -83,7 +83,7 @@ afl-whatsup out/
 # 1. Optimize Fuzzing Performance
 export AFL_HARDEN=1
 export AFL_FAST_CAL=1
-afl-fuzz -i in -o out -d -m none -- ./target @@
+afl-fuzz -i in -o out -d -m none -- /target @@
 
 # 2. Smart Session Handling
 wfuzz -z range,1-1000 -b "session=1234" https://target.com/profile?id=FUZZ

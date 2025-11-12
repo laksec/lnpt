@@ -6,7 +6,7 @@
     -t 200 \
     -recursion \
     -recursion-depth 2 \
-    -e .php,.html,.js,.json \
+    -e php,.html,.js,.json \
     -o ffuf_recursive.json \
     -of json \
     -v
