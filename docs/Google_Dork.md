@@ -39,7 +39,7 @@
     daterange:   - Date range search                   (daterange:20200101-20201231)
 
 ### NUMERIC RANGES
-    .           - Number range                        (price $100..$500)
+                - Number range                        (price $100..$500)
     in           - Unit conversion                     (100m in feet)
 
 ### SPECIALIZED SEARCHES
@@ -71,7 +71,7 @@
 
 ## ⚙️ SPECIAL CHARACTER SYNTAX
     @            - Social media tags                   (@twitter)
-    #            - Hashtag search                      (#cybersecurity)
+    #           - Hashtag search                      (#cybersecurity)
     $            - Currency/prices                     ($500 laptop)
     +            - Force term inclusion                (+required)
     _            - Underscore matching                 (file_name)
@@ -94,7 +94,7 @@
 
 ### Boolean Logic
     AND OR NOT  |  & + - "exact phrase"  (grouping) 
-    .  (range) *  (wildcard) ~  (synonym) 
+       (range) *  (wildcard) ~  (synonym) 
 
 ### Advanced Operators
     inanchor: inpostauthor: inposttitle: blogurl:

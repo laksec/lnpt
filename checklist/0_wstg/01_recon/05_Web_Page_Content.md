@@ -1,8 +1,8 @@
 # 🔍 INFORMATION GATHERING | REVIEW WEB PAGE CONTENT FOR INFORMATION LEAKAGE
 
-## 1.5 Comprehensive Web Page Content Analysis for Information Leakage
+## Comprehensive Web Page Content Analysis for Information Leakage
 
-### 1.5.1 HTML Source Code Analysis
+### 1 HTML Source Code Analysis
 - **Source Code Examination:**
   - HTML comment analysis testing
   - Hidden form field discovery testing
@@ -23,7 +23,7 @@
   - Sample data disclosure testing
   - Configuration in HTML testing
 
-### 1.5.2 Client-Side Code Analysis
+### 2 Client-Side Code Analysis
 - **JavaScript Source Analysis:**
   - JavaScript comment examination testing
   - API endpoint discovery in JavaScript testing
@@ -44,7 +44,7 @@
   - AJAX call endpoint discovery testing
   - WebSocket connection information testing
 
-### 1.5.3 Comment Analysis
+### 3 Comment Analysis
 - **HTML Comment Examination:**
   - Developer comment discovery testing
   - Template comment analysis testing
@@ -65,7 +65,7 @@
   - Configuration comment exposure testing
   - Internal link disclosure in comments
 
-### 1.5.4 Metadata Analysis
+### 4 Metadata Analysis
 - **HTML Meta Tag Analysis:**
   - Meta description content analysis testing
   - Meta keyword examination testing
@@ -86,7 +86,7 @@
   - Share preview content examination testing
   - Social media integration detection
 
-### 1.5.5 Hidden Content Discovery
+### 5 Hidden Content Discovery
 - **CSS Hidden Elements:**
   - Display:none element analysis testing
   - Visibility:hidden element examination testing
@@ -107,7 +107,7 @@
   - Tabindex negative value testing
   - Inert attribute content analysis
 
-### 1.5.6 Form & Input Analysis
+### 6 Form & Input Analysis
 - **Form Field Examination:**
   - Hidden form field value analysis testing
   - Disabled field content discovery testing
@@ -128,7 +128,7 @@
   - Validation rule discovery testing
   - Form workflow analysis testing
 
-### 1.5.7 Error Message Analysis
+### 7 Error Message Analysis
 - **Client-Side Error Messages:**
   - JavaScript error message analysis testing
   - Form validation error examination testing
@@ -149,7 +149,7 @@
   - Redirect page content examination testing
   - Authentication error message analysis
 
-### 1.5.8 Link & Resource Analysis
+### 8 Link & Resource Analysis
 - **Internal Link Discovery:**
   - Relative URL analysis testing
   - Absolute URL examination testing
@@ -170,7 +170,7 @@
   - External API endpoint discovery testing
   - Web service integration examination
 
-### 1.5.9 Data Attribute Analysis
+### 9 Data Attribute Analysis
 - **Custom Data Attributes:**
   - data-* attribute value analysis testing
   - Data attribute configuration testing
@@ -191,7 +191,7 @@
   - Title attribute content analysis testing
   - Accessibility configuration testing
 
-### 1.5.10 Script & Style Analysis
+### 10 Script & Style Analysis
 - **Inline Script Analysis:**
   - Inline JavaScript variable discovery testing
   - Inline function examination testing
@@ -212,7 +212,7 @@
   - Color scheme discovery testing
   - Layout information leakage testing
 
-### 1.5.11 Mobile-Specific Content Analysis
+### 11 Mobile-Specific Content Analysis
 - **Mobile Viewport Analysis:**
   - Viewport meta tag examination testing
   - Mobile-specific content discovery testing
@@ -233,7 +233,7 @@
   - Install prompt configuration testing
   - PWA meta tag analysis testing
 
-### 1.5.12 SEO & Analytics Content Analysis
+### 12 SEO & Analytics Content Analysis
 - **SEO Element Analysis:**
   - Structured data markup examination testing
   - Schema.org content analysis testing
@@ -254,7 +254,7 @@
   - User behavior tracking examination testing
   - Conversion tracking discovery testing
 
-### 1.5.13 Automated Content Analysis Framework
+### 13 Automated Content Analysis Framework
 ```yaml
 Web Page Content Analysis Pipeline:
   Content Extraction Phase:
@@ -298,7 +298,7 @@ Web Page Content Analysis Pipeline:
     - Continuous monitoring setup
 ```
 
-### 1.5.14 Testing Tools and Commands
+### 14 Testing Tools and Commands
 ```bash
 # HTML Source Analysis
 curl -s "https://target.com" | tee page_source.html
@@ -330,7 +330,7 @@ node js_analyzer.js https://target.com
 chromium --headless --dump-dom https://target.com | tee rendered_content.html
 ```
 
-### 1.5.15 Advanced Content Analysis Payloads
+### 15 Advanced Content Analysis Payloads
 ```python
 # Comprehensive Web Page Content Analyzer
 import requests
@@ -889,7 +889,7 @@ class DynamicContentAnalyzer:
         return dynamic_analysis
 ```
 
-### 1.5.16 Continuous Content Monitoring
+### 16 Continuous Content Monitoring
 ```python
 # Web Page Content Change Monitor
 class ContentChangeMonitor:
@@ -1059,7 +1059,7 @@ class AutomatedContentScanner:
         return count
 ```
 
-### 1.5.17 Risk Assessment Matrix
+### 17 Risk Assessment Matrix
 ```yaml
 Web Page Content Information Leakage Risk Assessment:
   Critical Risk Findings:
@@ -1103,7 +1103,7 @@ Web Page Content Information Leakage Risk Assessment:
     - Public social media links
 ```
 
-### 1.5.18 Defense & Protection Testing
+### 18 Defense & Protection Testing
 ```python
 # Content Leakage Protection Tester
 class ContentProtectionTester:
@@ -1229,7 +1229,7 @@ class ContentProtectionTester:
         return report
 ```
 
-### 1.5.19 Remediation Checklist
+### 19 Remediation Checklist
 ```markdown
 ## ✅ WEB PAGE CONTENT INFORMATION LEAKAGE REMEDIATION CHECKLIST
 
@@ -1314,7 +1314,7 @@ class ContentProtectionTester:
 - [ ] Regular policy review and updates
 ```
 
-### 1.5.20 Secure Configuration Examples
+### 20 Secure Configuration Examples
 ```html
 <!-- Secure HTML Template Example -->
 <!DOCTYPE html>
@@ -1407,7 +1407,7 @@ class SecureApiClient {
         
         // Use secure fetch without exposing tokens
         const response = await fetch(url, {
-            ...options,
+             ..options,
             credentials: 'include' // Rely on HTTP-only cookies
         });
         
@@ -1484,7 +1484,7 @@ def strip_comments(html):
     return re.sub(r'<!--.*?-->', '', html, flags=re.DOTALL)
 ```
 
-### 1.5.21 Testing Completion Checklist
+### 21 Testing Completion Checklist
 ```markdown
 ## ✅ WEB PAGE CONTENT INFORMATION LEAKAGE TESTING COMPLETION CHECKLIST
 
@@ -1569,7 +1569,7 @@ def strip_comments(html):
 - [ ] Reporting completion
 ```
 
-### 1.5.22 Executive Reporting Template
+### 22 Executive Reporting Template
 ```markdown
 # Web Page Content Information Leakage Assessment Report
 

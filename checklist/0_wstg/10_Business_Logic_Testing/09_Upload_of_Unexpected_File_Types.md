@@ -1,19 +1,19 @@
 # 🔍 UNEXPECTED FILE TYPE UPLOAD TESTING CHECKLIST
 
-## 10.9 Comprehensive Unexpected File Type Upload Testing
+## Comprehensive Unexpected File Type Upload Testing
 
-### 10.9.1 File Extension Bypass Testing
+### 1 File Extension Bypass Testing
 - **Extension Manipulation Testing:**
   - Double extension attacks (.jpg.php)
   - Reverse double extension (.php.jpg)
-  - Case variation testing (.JPG, .jPg, .JPg)
+  - Case variation testing (.JPG,  jPg,  JPg)
   - Null byte injection (.php%00.jpg)
   - Unicode extension spoofing
   - Long extension names
   - Extensionless file uploads
 
 - **Extension Spoofing Testing:**
-  - Renamed executable files (.exe renamed to .jpg)
+  - Renamed executable files (.exe renamed to  jpg)
   - Script files with image extensions
   - Document files with media extensions
   - Archive files with document extensions
@@ -26,7 +26,7 @@
   - MIME type vs extension mismatch
   - Partial extension matching
 
-### 10.9.2 MIME Type Manipulation Testing
+### 2 MIME Type Manipulation Testing
 - **Content-Type Testing:**
   - MIME type spoofing
   - Invalid MIME types
@@ -48,7 +48,7 @@
   - Default type assignment
   - Fallback type behavior
 
-### 10.9.3 File Content Manipulation Testing
+### 3 File Content Manipulation Testing
 - **Polyglot File Testing:**
   - Multiple format files (PDF/JavaScript)
   - Image with embedded scripts
@@ -70,7 +70,7 @@
   - Archive with path traversal
   - Symlink attacks in archives
 
-### 10.9.4 File Header/Structure Testing
+### 4 File Header/Structure Testing
 - **Header Corruption Testing:**
   - Truncated file headers
   - Oversized file headers
@@ -92,7 +92,7 @@
   - Reference manipulation
   - Boundary condition testing
 
-### 10.9.5 Server-Side Processing Testing
+### 5 Server-Side Processing Testing
 - **Parser Testing:**
   - Image parser vulnerabilities
   - Document parser flaws
@@ -114,7 +114,7 @@
   - Storage location security
   - Access control validation
 
-### 10.9.6 Client-Side Bypass Testing
+### 6 Client-Side Bypass Testing
 - **Browser Validation Testing:**
   - Client-side filter bypass
   - JavaScript validation circumvention
@@ -136,7 +136,7 @@
   - Cloud storage integration
   - Mobile-specific file types
 
-### 10.9.7 Business Logic File Testing
+### 7 Business Logic File Testing
 - **Context-Aware Testing:**
   - Profile picture script upload
   - Document upload code execution
@@ -158,7 +158,7 @@
   - External scanning services
   - Backup system exposure
 
-### 10.9.8 Size and Resource Testing
+### 8 Size and Resource Testing
 - **File Size Testing:**
   - Zero-byte file uploads
   - Extremely large file attacks
@@ -180,7 +180,7 @@
   - Nested archive attacks
   - Decompression resource attacks
 
-### 10.9.9 Security Control Testing
+### 9 Security Control Testing
 - **Antivirus Bypass Testing:**
   - Obfuscated malware
   - Encrypted payloads
@@ -202,7 +202,7 @@
   - User interaction requirements
   - Hardware detection
 
-### 10.9.10 Advanced Attack Testing
+### 10 Advanced Attack Testing
 - **Web Shell Testing:**
   - Various web shell formats
   - Obfuscated shell code
@@ -224,7 +224,7 @@
   - HTML file upload XSS
   - Metadata-based XSS
 
-### 10.9.11 Protocol and Encoding Testing
+### 11 Protocol and Encoding Testing
 - **Encoding Testing:**
   - Base64 encoded files
   - URL encoded filenames
@@ -246,7 +246,7 @@
   - Platform-specific parsing
   - Browser-specific handling
 
-### 10.9.12 Detection and Response Testing
+### 12 Detection and Response Testing
 - **Monitoring Testing:**
   - File upload logging
   - Suspicious activity detection
@@ -317,9 +317,9 @@
 
 #### Common Test Scenarios:
 **Extension Bypass Tests:**
-- Upload .php files renamed as .jpg
+- Upload  php files renamed as  jpg
 - Test double extensions (.file.jpg.php)
-- Use case variations (.PHP, .PhP)
+- Use case variations (.PHP,  PhP)
 - Try null byte injection
 - Test unicode character exploits
 

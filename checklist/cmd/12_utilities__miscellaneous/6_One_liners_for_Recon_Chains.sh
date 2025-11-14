@@ -116,11 +116,11 @@ watch -n 3600 "subfinder -d target.com | anew subs.txt && notify-send 'New subs 
 
 
 # This collection represents thousands of hours of real-world reconnaissance experience condensed into powerful one-liners that can:
-#   - Discover hidden subdomains and assets
-#   - Identify vulnerable endpoints
-#   - Monitor for data leaks
-#   - Automate continuous reconnaissance
-#   - Provide comprehensive attack surface visibility
+#  - Discover hidden subdomains and assets
+#  - Identify vulnerable endpoints
+#  - Monitor for data leaks
+#  - Automate continuous reconnaissance
+#  - Provide comprehensive attack surface visibility
 
 # Each chain has been battle-tested in real bug bounty programs and penetration tests.
 

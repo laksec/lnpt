@@ -1,9 +1,9 @@
 
 # 🔍 REQUEST FORGERY TESTING CHECKLIST
 
-## 10.3 Comprehensive Request Forgery Testing
+## Comprehensive Request Forgery Testing
 
-### 10.3.1 Request Parameter Manipulation Testing
+### 1 Request Parameter Manipulation Testing
     - Query Parameter Testing:
       * Parameter addition/modification
       * Parameter deletion attempts
@@ -25,7 +25,7 @@
       * User-Agent manipulation
       * Cookie header tampering
 
-### 10.3.2 HTTP Method Manipulation Testing
+### 2 HTTP Method Manipulation Testing
     - Method Override Testing:
       * POST to GET conversion attempts
       * PUT/PATCH method testing
@@ -47,7 +47,7 @@
       * Unicode method name manipulation
       * Method name truncation
 
-### 10.3.3 URL and Path Manipulation Testing
+### 3 URL and Path Manipulation Testing
     - Path Traversal Testing:
       * Directory traversal attempts
       * Absolute path injection
@@ -69,7 +69,7 @@
       * Nested resource manipulation
       * URL pattern prediction
 
-### 10.3.4 Authentication Bypass via Request Forgery
+### 4 Authentication Bypass via Request Forgery
     - Session Manipulation Testing:
       * Session ID prediction
       * Cookie parameter manipulation
@@ -91,7 +91,7 @@
       * Access level parameter forging
       * Tenant ID manipulation
 
-### 10.3.5 Business Logic Bypass Testing
+### 5 Business Logic Bypass Testing
     - Workflow Bypass Testing:
       * Step skipping via direct access
       * Approval process circumvention
@@ -113,7 +113,7 @@
       * Approval state forging
       * Review status modification
 
-### 10.3.6 CSRF and State Modification Testing
+### 6 CSRF and State Modification Testing
     - CSRF Token Testing:
       * CSRF token removal attempts
       * CSRF token prediction
@@ -135,7 +135,7 @@
       * Auto-submit form testing
       * Flash-based CSRF attacks
 
-### 10.3.7 API Request Forgery Testing
+### 7 API Request Forgery Testing
     - Endpoint Manipulation Testing:
       * Unpublished API endpoint testing
       * Version parameter manipulation
@@ -157,7 +157,7 @@
       * Bulk action authorization
       * Mass assignment vulnerabilities
 
-### 10.3.8 File and Resource Manipulation
+### 8 File and Resource Manipulation
     - File Reference Testing:
       * File ID manipulation
       * File path modification
@@ -179,7 +179,7 @@
       * Path traversal in downloads
       * Signed URL exploitation
 
-### 10.3.9 Financial Transaction Forgery
+### 9 Financial Transaction Forgery
     - Amount Manipulation Testing:
       * Negative amount submission
       * Zero amount transactions
@@ -201,7 +201,7 @@
       * Chargeback state modification
       * Settlement status tampering
 
-### 10.3.10 Timing and Race Condition Testing
+### 10 Timing and Race Condition Testing
     - Time-Based Testing:
       * Timestamp manipulation
       * Expiration date modification
@@ -223,7 +223,7 @@
       * Dependency chain breaking
       * State machine exploitation
 
-### 10.3.11 Mobile and API-Specific Forgery
+### 11 Mobile and API-Specific Forgery
     - Mobile API Testing:
       * Mobile header manipulation
       * Device ID spoofing
@@ -245,7 +245,7 @@
       * Partner ID spoofing
       * External reference manipulation
 
-### 10.3.12 Advanced Forgery Techniques
+### 12 Advanced Forgery Techniques
     - Encoding and Obfuscation Testing:
       * Base64 encoding manipulation
       * URL encoding attacks

@@ -1,8 +1,8 @@
 # 🔍 INFORMATION GATHERING | FINGERPRINT WEB SERVER
 
-## 1.2 Comprehensive Web Server Fingerprinting & Identification
+## Comprehensive Web Server Fingerprinting & Identification
 
-### 1.2.1 Banner Grabbing Techniques
+### 1 Banner Grabbing Techniques
 - **Basic Banner Grabbing:**
   - Netcat banner grabbing testing
   - Telnet HTTP header retrieval
@@ -23,7 +23,7 @@
   - HTTP verb response testing
   - Protocol version testing
 
-### 1.2.2 HTTP Response Analysis
+### 2 HTTP Response Analysis
 - **Header-Based Fingerprinting:**
   - Server header field analysis
   - X-Powered-By header examination
@@ -44,7 +44,7 @@
   - Default page identification
   - Maintenance page recognition
 
-### 1.2.3 Active Fingerprinting Methods
+### 3 Active Fingerprinting Methods
 - **Protocol Behavior Testing:**
   - HTTP method support testing (GET, POST, PUT, DELETE, OPTIONS, TRACE)
   - HTTP version support analysis
@@ -65,7 +65,7 @@
   - Space padding testing
   - Special character testing
 
-### 1.2.4 Passive Fingerprinting Techniques
+### 4 Passive Fingerprinting Techniques
 - **Traffic Analysis:**
   - TCP window size analysis
   - TCP timestamp examination
@@ -86,7 +86,7 @@
   - Traffic volume analysis
   - Behavioral profiling
 
-### 1.2.5 Web Server Software Identification
+### 5 Web Server Software Identification
 - **Apache HTTP Server:**
   - Apache version detection testing
   - Apache module identification
@@ -127,7 +127,7 @@
   - Jetty server recognition
   - Node.js HTTP server detection
 
-### 1.2.6 Application Server Fingerprinting
+### 6 Application Server Fingerprinting
 - **Java Application Servers:**
   - Tomcat version detection
   - JBoss/WildFly identification
@@ -168,7 +168,7 @@
   - Rack server recognition
   - Sinatra server identification
 
-### 1.2.7 CDN & Reverse Proxy Detection
+### 7 CDN & Reverse Proxy Detection
 - **Content Delivery Networks:**
   - CloudFront detection testing
   - Cloudflare identification
@@ -189,7 +189,7 @@
   - Envoy proxy detection
   - IIS ARR identification
 
-### 1.2.8 Security Filter Identification
+### 8 Security Filter Identification
 - **Web Application Firewalls:**
   - ModSecurity detection testing
   - Cloudflare WAF identification
@@ -210,7 +210,7 @@
   - Feature-Policy header detection
   - Permissions-Policy analysis
 
-### 1.2.9 Framework & CMS Detection
+### 9 Framework & CMS Detection
 - **Web Frameworks:**
   - Django detection testing
   - Ruby on Rails identification
@@ -231,7 +231,7 @@
   - Squarespace detection
   - Ghost identification
 
-### 1.2.10 Automated Fingerprinting Framework
+### 10 Automated Fingerprinting Framework
 ```yaml
 Web Server Fingerprinting Pipeline:
   Discovery Phase:
@@ -275,7 +275,7 @@ Web Server Fingerprinting Pipeline:
     - Reporting preparation
 ```
 
-### 1.2.11 Testing Tools and Commands
+### 11 Testing Tools and Commands
 ```bash
 # Basic Banner Grabbing
 nc -v target.com 80
@@ -308,7 +308,7 @@ nikto -h target.com -Display 1234
 skipfish -o output_dir http://target.com
 ```
 
-### 1.2.12 Advanced Fingerprinting Payloads
+### 12 Advanced Fingerprinting Payloads
 ```python
 # Comprehensive Web Server Fingerprinting Tool
 import requests
@@ -636,7 +636,7 @@ class PassiveFingerprinter:
         return patterns
 ```
 
-### 1.2.13 Continuous Fingerprinting Monitoring
+### 13 Continuous Fingerprinting Monitoring
 ```python
 # Web Server Fingerprinting Monitor
 class ServerFingerprintMonitor:
@@ -773,7 +773,7 @@ class FingerprintDatabase:
         return max(scores.items(), key=lambda x: x[1]) if scores else ('unknown', 0)
 ```
 
-### 1.2.14 Risk Assessment Matrix
+### 14 Risk Assessment Matrix
 ```yaml
 Web Server Fingerprinting Risk Assessment:
   Critical Risk Exposures:
@@ -817,7 +817,7 @@ Web Server Fingerprinting Risk Assessment:
     - Common framework usage
 ```
 
-### 1.2.15 Defense & Obfuscation Testing
+### 15 Defense & Obfuscation Testing
 ```python
 # Web Server Obfuscation Tester
 class ServerObfuscationTester:
@@ -921,7 +921,7 @@ class ServerObfuscationTester:
         return report
 ```
 
-### 1.2.16 Remediation Checklist
+### 16 Remediation Checklist
 ```markdown
 ## ✅ WEB SERVER FINGERPRINTING REMEDIATION CHECKLIST
 
@@ -967,7 +967,7 @@ class ServerObfuscationTester:
 
 ### SSL/TLS Configuration:
 - [ ] Remove SSLv2, SSLv3 support
-- [ ] Prefer TLS 1.2 and above
+- [ ] Prefer TLS  and above
 - [ ] Implement strong cipher suites
 - [ ] Remove weak ciphers
 - [ ] Implement certificate pinning
@@ -1006,7 +1006,7 @@ class ServerObfuscationTester:
 - [ ] Regular network security audits
 ```
 
-### 1.2.17 Secure Configuration Examples
+### 17 Secure Configuration Examples
 ```nginx
 # Secure Nginx Configuration for Fingerprinting Protection
 server {
@@ -1115,7 +1115,7 @@ class RemoveServerHeaderMiddleware:
         return response
 ```
 
-### 1.2.18 Testing Completion Checklist
+### 18 Testing Completion Checklist
 ```markdown
 ## ✅ WEB SERVER FINGERPRINTING TESTING COMPLETION CHECKLIST
 
@@ -1174,7 +1174,7 @@ class RemoveServerHeaderMiddleware:
 - [ ] PHP server detection completed
 - [ ] Python server detection completed
 - [ ] Ruby server detection completed
-- [ ] .NET server detection completed
+- [ ]  NET server detection completed
 - [ ] Node.js detection completed
 - [ ] Framework detection completed
 - [ ] CMS detection completed
@@ -1200,7 +1200,7 @@ class RemoveServerHeaderMiddleware:
 - [ ] Reporting completion
 ```
 
-### 1.2.19 Executive Reporting Template
+### 19 Executive Reporting Template
 ```markdown
 # Web Server Fingerprinting Assessment Report
 

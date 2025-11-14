@@ -3,7 +3,7 @@
 # KALI LINUX NETWORK UTILITIES BIBLE (300+ COMMANDS)
 # ===================================================
 # Covers: Scanning, Proxying, MITM, Traffic Analysis
-#         Pivoting, Tunneling, and Advanced Routing
+#        Pivoting, Tunneling, and Advanced Routing
 
 ### 1. PROXYCHAIN TECHNIQUES (8 Methods) ###
 
