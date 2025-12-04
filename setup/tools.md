@@ -3,6 +3,7 @@
 ## Go Setup
 
     sudo apt install gccgo-go -y && sudo apt install golang-go -y
+
     export GOPATH="$HOME/go"
     export PATH="$PATH:$GOPATH/bin"
 
@@ -42,31 +43,31 @@
 
 
 ### Apt Instalation
-    sudo apt install firefox-esr
+    sudo apt install firefox-esr -y
 
     # Wordlists for security testing
-    sudo apt  install seclists
+    sudo apt  install seclists -y
 
     # --depth 1 removes git file which is huge
     git clone --depth 1 https://github.com/danielmiessler/SecLists.git
 
     # Lightweight DNS server
-    sudo apt install tinydns
+    sudo apt install tinydns -y
 
     # Passive subdomain enumeration tool
-    sudo apt install sublist3r
+    sudo apt install sublist3r -y
 
     # Screenshot websites for recon
-    sudo apt install gowitness
+    sudo apt install gowitness -y
 
     # Find extra archived links from the Wayback Machine
-    sudo apt install waymore
+    sudo apt install waymore -y
 
     # IPv6 MITM attack tool for Active Directory
-    sudo apt install mitm6
+    sudo apt install mitm6 -y
 
     # Active Directory - visualization & priv esc mapping
-    sudo apt install bloodhound
+    sudo apt install bloodhound -y
 
 ---
 
