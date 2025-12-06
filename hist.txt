@@ -1,0 +1,205 @@
+    1  ls
+    2  cd
+    3  ls
+    4  ls -a
+    5  ls .pdtm/
+    6  ls .pdtm/go/bin/
+    7  obash 
+    8  sbash 
+    9  ls
+   10  mv 1dm_ 1d 
+   11  mv 2dm_wc 2dw
+   12  mv 2dm_wc443 2dw443
+   13  ls
+   14  mv 3dm_wc443_subfinder 3dw443_subfinder 
+   15  ls
+   16  mv old/1dm_wc_ old/1dw
+   17  mv old/1dm_wc_443 old/1dw443 
+   18  ls old/
+   19  ls
+   20  cat 2dw
+   21  cat 3dw443_subfinder 
+   22  ls
+   23  mv 2dw 2dw443 old/
+   24  ls
+   25  ls old/
+   26  ls
+   27  cat 1d | wc -l
+   28  cat 3dw443_subfinder | wc -l
+   29  cat 3dw_subfinder | wc -l
+   30  chaos-client -h
+   31  ls
+   32  chaos-client -dL old/2dw443 -o 2dw443chs
+   33  amass enum -passive -df old/2dw443 -o 2dw443ams
+   34  ij
+   35  ls
+   36  ls old/
+   37  amass enum -passive -df old/2dw443 -o ams3dw443
+   38  amass enum -active -df old/2dw443 -o ams3dw443acv
+   39  ls
+   40  while read dm; do assetfinder --subs-only "$dm"; done < old/2dw443 > 2dw443afd
+   41  ls
+   42  cat 2dw443afd 
+   43  cat 2dw443afd | wc -l
+   44  while read dm; do curl -s "https://crt.sh/?q=%25.$dm&output=json" | jq -r '.[].name_value' | sed 's/\*\.//g'; done < old/2dw443 | sort -u > 3dw443crtsh
+   45  sudo apt install jq
+   46  ls
+   47  cat 3dw443crtsh 
+   48  while read dm; do assetfinder --subs-only "$dm"; done < old/2dw > 3dwafd
+   49  ls
+   50  mv 2dw443afd afd2dw443
+   51  mv afd2dw443 afd3dw443 
+   52  mv 3dw443sbf sbf3dw443
+   53  ls
+   54  mv 3dw443crtsh crt3dw443
+   55  ls
+   56  mv 3dwafd afd3dw
+   57  mv 3dwsbf sbf3dw
+   58  ls
+   59  cat crt3dw443 
+   60  cat afd3dw | wc -l
+   61  cat afd3dw443 | wc -l
+   62  cat sbf3dw | wc -l
+   63  cat sbf3dw443 | wc -l
+   64  ls
+   65  while read dm; do curl -s "https://crt.sh/?q=%25.$dm&output=json" | jq -r '.[].name_value' | sed 's/\*\.//g'; done < old/2dw443
+   66  while read dm; do curl -s "https://crt.sh/?q=%25.$dm&output=json"; done < old/2dw443
+   67  while read dm; do echo -s "https $dm"; done < old/2dw443
+   68  while read dm; do echo -s "https://crt.sh/?q=%25.$dm&output=json"; done < old/2dw443
+   69  amass -h
+   70  amass enum -h
+   71  amass enum -active -df old/2dw -o ams3dwacv
+   72  otx
+   73  while read dm; do curl -s "https://api.certspotter.com/v1/issuances?domain=$dm&include_subdomains=true&expand=dns_names" | jq -r '.[].dns_names[]' | sed 's/\"//g'; done < old/2dw443 | sort -u > crtspt2dw443
+   74  ls
+   75  cat crtspt2dw443 
+   76  cat crt3dw443 
+   77  rm crt3dw443 
+   78  rm crtspt2dw443 
+   79  ls
+   80  while read dm; do curl -s "https://api.certspotter.com/v1/issuances?domain=$dm&include_subdomains=true&expand=dns_names"; done < old/2dw443
+   81  while read dm; do echo -s "https://api.certspotter.com/v1/issuances?domain=$dm&include_subdomains=true&expand=dns_names"; done < old/2dw443
+   82  while read dm; do echo "https://api.certspotter.com/v1/issuances?domain=$dm&include_subdomains=true&expand=dns_names"; done < old/2dw443
+   83  tlsx --input-file old/2dw443 --output-file tls3dw443
+   84  tlsx -h
+   85  tlsx -l old/2dw443 --o tls3dw443
+   86  ls
+   87  cat tls3dw443 
+   88  tlsx -l old/2dw --o tls3dw
+   89  cat tls3dw
+   90  rm tls3dw
+   91  rm tls3dw443 
+   92  while read dm; do waybackurls "$dm" | grep -oE "[a-zA-Z0-9._-]+\.$dm"; done < old/2dw443 | sort -u > wbu3dw443
+   93  while read dm; do waybackurls "$dm" | grep -oE "[a-zA-Z0-9._-]+\.$dm"; done < old/2dw443
+   94  while read dm; do waybackurls "$dm"; done < old/2dw443
+   95  cat old/2dw443 
+   96  while read dm; do "waybackurls $dm"; done < old/2dw443
+   97  while read dm; do echo "$dm"; done < old/2dw443
+   98  while read dm; do "echo $dm"; done < old/2dw443
+   99  while read dm; do waybackurls "$dm"; done < old/2dw443
+  100  cat old/2dw443
+  101  cat old/2dw443 | waybackurls 
+  102  cat old/2dw443 | waybackurls | wburl3dw443
+  103  cat old/2dw443 | waybackurls | tee wburl3dw443
+  104  ls
+  105  cat wbu3dw443 
+  106  rm wbu3dw443 
+  107  cat wburl3dw443 
+  108  cat wburl3dw443 | wc -l
+  109  cat old/2dw | waybackurls | tee wburl3dw
+  110  cat wburl3dw443 | wc -l
+  111  cat wburl3dw | wc -l
+  112  cat old/2dw443 | gau
+  113  cat old/2dw443 | gau | tee gau3dw443
+  114  ls
+  115  while read dm; do curl -s "https://crt.sh/?q=%25.$dm&output=json" | jq -r '.[].name_value' | sed 's/\*\.//g
+  116  cat old/2dw443 
+  117  curl -s "https://crt.sh/?q=%25.say.rocks&output=json" | jq -r '.[].name_value' | sed 's/\*\.//g'
+  118  curl -s "https://crt.sh/?q=%25.say.rocks&output=json"
+  119  curl -s "https://crt.sh/?q=%25.say.rocks&output=json" | jq -r '.[].name_value'
+  120  curl -s "https://crt.sh/?q=%25.say.rocks&output=json" | jq -r '.[].name_value' | sed 's/\*\.//g' | sort | uniq
+  121  while read dm; do curl -s "https://crt.sh/?q=%25.$dm&output=json"; done < old/2dw443 | jq -r '.[].name_value' | sed 's/\*\.//g' | sort | uniq 
+  122  cat old/2dw443 | curl -s "https://crt.sh/?q=%25.$dm&output=json" | jq -r '.[].name_value' | sed 's/\*\.//g' | sort | uniq
+  123  cat old/2dw443 | while read dm; curl -s "https://crt.sh/?q=%25.$dm&output=json" | jq -r '.[].name_value' | sed 's/\*\.//g' done | sort | uniq
+  124  cat old/2dw443 | while read dm; curl -s "https://crt.sh/?q=%25.$dm&output=json" | jq -r '.[].name_value' | sed 's/\*\.//g'; done | sort | uniq
+  125  cat old/2dw443 | while read dm; curl -s "https://crt.sh/?q=%25.$dm&output=json" done| jq -r '.[].name_value' | sed 's/\*\.//g' | sort | uniq
+  126  cat old/2dw443 | while read dm; curl -s "https://crt.sh/?q=%25.$dm&output=json"; done | jq -r '.[].name_value' | sed 's/\*\.//g' | sort | uniq
+  127  cat old/2dw443 | 
+  128  cat old/2dw443 | while read dm;echo "x - $dm" done
+  129  cat old/2dw443 | while read dm;do echo "x - $dm"; done
+  130  cat old/2dw443 | while read dm;do curl -s "https://crt.sh/?q=%25.$dm&output=json"; done | jq -r '.[].name_value' | sed 's/\*\.//g' | sort | uniq | tee crtsh3dw443
+  131  cat old/2dw443 | while read dm;do curl -s "https://crt.sh/?q=%25.$dm&output=json"; done | jq -r '.[].name_value' | sed 's/\*\.//g'
+  132  cat old/2dw443 | while read dm;do curl -s "https://crt.sh/?q=%25.$dm&output=json"; done
+  133  cat old/2dw443 | while read dm;do curl -s "https://crt.sh/?q=%25.$dm&output=json"; done:
+  134  cat old/2dw443 | while read dm;do curl -s "https://crt.sh/?q=%25.$dm&output=json"; done;
+  135  cat old/2dw443 | while read dm;do echo "https://crt.sh/?q=%25.$dm&output=json"; done;
+  136  cat old/2dw443 | while read dm;do echo "x - $dm"; done
+  137  cat old/2dw443 | while read dm;do echo "https://crt.sh/?q=%25.$dm"; done
+  138  cat old/2dw443 | while read dm;do echo "https://crt.sh/?q=%25.$dm&tt"; done
+  139  cat old/2dw443 | while read dm;do echo "https://crt.sh/?q=%25.$dm"; done
+  140  cat old/2dw443 | while read dm;do echo "https://crt.sh/?q=%25.$dm"+"tt"; done
+  141  cat old/2dw443 | while read dm;do echo "https://crt.sh/?q=%25.$dm"; done
+  142  cat old/2dw443 | while read dm;do echo "https://crt.sh/?q=%25.$dm"; done
+  143  cat old/2dw443 | while read dm; do echo "VAR START ->${dm}<- VAR END"; done
+  144  cat old/2dw443 | while read dm; do echo "https://crt.sh/?q=%25.${dm}&output=json"; done
+  145  cat old/2dw443 | while read dm; do echo "https://crt.sh/?q=%25.${dm}output=json"; done
+  146  cat old/2dw443 | while read dm; do echo "https://crt.sh/?q=%25.${dm} output=json"; done
+  147  cat old/2dw443 | while read dm; do echo "aaa${dm}"; done
+  148  cat old/2dw443 | while read dm; do echo "aaa-${dm}"; done
+  149  cat old/2dw443 | while read dm; do echo "aaa-${dm}-"; done
+  150  cat old/2dw443 | while read dm; do echo "aaa-$dm-bbb"; done
+  151  cat old/2dw443 | while read dm; do echo "aaa-$dm-b"; done
+  152  dos2unix old/2dw443
+  153  Cat old/2dw443 | while read dm; do echo "aaa-${dm}-"; done
+  154  cat old/2dw443 | while read dm; do echo "aaa-${dm}-"; done
+  155  dos2unix old/2dw
+  156  cat old/2dw | while read dm; do echo "aaa-${dm}-"; done
+  157  cat old/2dw443 | while read dm; do curl -s "https://crt.sh/?q=%25.$dm&output=json";done | jq -r '.[].name_value' | sed 's/\*\.//g' | tee crtsh3dw443 
+  158  cat old/2dw443 | while read dm; do curl -s "https://crt.sh/?q=%25.$dm&output=json";done | jq -r '.[].name_value' | sed 's/\*\.//g'
+  159  cat old/2dw443 | while read dm; do echo "https://crt.sh/?q=%25.$dm&output=json";done
+  160  cat old/2dw443 | while read dm; do curl -s "https://crt.sh/?q=%25.$dm&output=json";done | jq -r '.[].name_value'
+  161  cat old/2dw443 | while read dm; do curl -s "https://crt.sh/?q=%25.$dm&output=json";done | jq -r '.[].name_value' | sed 's/\*\.//g' | sort | uniq
+  162  cat old/2dw443 | while read dm; do curl -s "https://crt.sh/?q=%25.$dm&output=json";done | jq -r '.[].name_value' | sed 's/\*\.//g'|sort|uniq|tee crt3dw43 
+  163  cat crt3dw43 
+  164  cat crtsh3dw443 
+  165  ls
+  166  cat crtsh.txt | wc -l
+  167  rm crtsh.txt 
+  168  cat crtsh3dw443 | wc -l
+  169  cat crtsh3dw | wc -l
+  170  rm crtsh3dw
+  171  rm crtsh3dw443 
+  172  cat crt3dw43 | wc -l
+  173  cat old/2dw | while read dm; do curl -s "https://crt.sh/?q=%25.$dm&output=json";done | jq -r '.[].name_value' | sed 's/\*\.//g'|sort|uniq|tee crt3dw
+  174  cat old/2dw443 | tlsx | tee tks3dw443
+  175  cat tks3dw443 
+  176  rm tks3dw443 
+  177  cat old/2dw | gau | tee gau3dw
+  178  ls
+  179  cat wburl3dw443 | wc -l
+  180  cat wburl3dw | wc -l
+  181  cat gau3dw | wc -l
+  182  cat old/2dw | while read dm; do curl -s "https://crt.sh/?q=%25.$dm&output=json";done | jq -r '.[].name_value' | sed 's/\*\.//g' | tee crtsh3dw
+  183  cat old/2dw443|while read dm; do curl -s "https://api.certspotter.com/v1/issuances?domain=$dm&include_subdomains=true&expand=dns_names";done | jq -r '.[].dns_names[]' | sed 's/\"//g'|sort|uniq|tee cspt3dw443
+  184  ls
+  185  cat cspt3dw | w -l
+  186  cat cspt3dw | wc -l
+  187  cat cspt3dw443 | wc -l
+  188  cat crt3dw | wc -l
+  189  cat crt3dw43 | wc -l
+  190  cat cspt3dw443 | wc -l
+  191  cat cspt3dw | wc -l
+  192  ls
+  193  cat old/2dw|while read dm; do curl -s "https://api.certspotter.com/v1/issuances?domain=$dm&include_subdomains=true&expand=dns_names";done | jq -r '.[].dns_names[]' | sed 's/\"//g'|sort|uniq|tee cspt3dw
+  194  curl -h
+  195  gau
+  196  go install github.com/lc/gau/v2/cmd/gau@latest
+  197  gau -h
+  198  ls
+  199  amass enum -passive -df old/2dw -o 2dwams
+  200  l
+  201  ls
+  202  history 
+  203  cddownload 
+  204  ls
+  205  history > hst.txt
