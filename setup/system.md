@@ -61,13 +61,6 @@
     alias openzsh='sudo nano ~/.zshrc'
     alias srczsh='source ~/.zshrc'
 
-    export PATH=$PATH:/mnt/c/Program\ Files/Sublime\ Text
-    alias subl='/mnt/c/Program\ Files/Sublime\ Text/subl.exe'
-
-
-    export PATH=$PATH:/mnt/c/Users/laksh/AppData/Local/Programs/Microsoft\ VS\ Code
-    alias code='/mnt/c/Users/laksh/AppData/Local/Programs/Microsoft\ VS\ Code/Code.exe'
-
     # Kali Prompt
     PROMPT='%F{green}┌─(%flnpt%F{green})%f-%F{green}[%f%F{blue}%~%f%F{green}]'$'\n''└─$ '
     PROMPT='%F{green}┌─(%f$(date "+%b%d")%F{green})-%F{green}[%f%F{blue}%~%f%F{green}]'$'\n''└─$ '

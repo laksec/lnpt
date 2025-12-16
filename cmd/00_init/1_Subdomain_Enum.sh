@@ -2,9 +2,6 @@
 
 ## 1. PASSIVE DISCOVERY
 
-# Fast passive enumeration using Subfinder for multiple domains
-subfinder -dL dml.txt -silent -o subfinder.txt
-
 # Comprehensive passive enumeration with all sources enabled
 subfinder -dL dml.txt -all -silent -o subfinder_all.txt
 
