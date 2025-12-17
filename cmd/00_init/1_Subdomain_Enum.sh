@@ -1,21 +1,8 @@
 # SUBDOMAIN ENUMERATION ONLY - COMMAND REFERENCE (MULTI-DOMAIN)
 
 ## 1. PASSIVE DISCOVERY
-
-# Comprehensive passive enumeration with all sources enabled
-subfinder -dL dml.txt -all -silent -o subfinder_all.txt
-
-# Asset discovery from Project Discovery's Chaos dataset
-chaos -dL dml.txt -o chaos.txt
-
-# Fast passive enumeration using Findomain for multiple domains
-findomain -f dml.txt -u findomain.txt
-
 # Passive domain discovery without DNS resolution (Amass)
 amass enum -passive -df dml.txt -o amass_passive.txt
-
-# Simple subdomain discovery using Assetfinder
-while read dm; do assetfinder --subs-only "$dm"; done < dml.txt > assetfinder.txt
 
 ## 2. CERTIFICATE TRANSPARENCY LOGS
 
