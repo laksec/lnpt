@@ -42,14 +42,13 @@
 
     # ln -s /mnt/d/work ~/j
 
-    alias cdenv='cd /mnt/d/penv'
-    alias cdws='cd /mnt/d/ws'
-    alias cdlnpt='cd /mnt/d/penv/lnpt'
+    alias cdenv='cd /mnt/d/work'
+    alias cdws='cd /mnt/d//work/ws'
+    alias cdlnpt='cd /mnt/d/work/lnpt'
 
     alias cddownload='cd /mnt/d/download'
 
-    alias srcpy3="source /mnt/d/penv/py3/.py3/bin/activate"
-    alias cdpy3="cd /mnt/d/penv/py3"
+    alias spy3="source /mnt/d/work/py3/bin/activate"
 
     alias emptyHistory='sudo echo "" > ~/.zsh_history'
     alias openHistory='sudo nano ~/.zsh_history'
@@ -58,8 +57,10 @@
 
     alias kupgrade='sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y'
 
-    alias openzsh='sudo nano ~/.zshrc'
-    alias srczsh='source ~/.zshrc'
+    alias obsh='sudo nano ~/.bashrc'
+    alias sbsh='source ~/.bashrc'
+    
+    # python -m venv venv
 
     # Kali Prompt
     PROMPT='%F{green}┌─(%flnpt%F{green})%f-%F{green}[%f%F{blue}%~%f%F{green}]'$'\n''└─$ '
