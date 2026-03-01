@@ -8,7 +8,7 @@
         - sudo nano ~/.zshrc
         - source ~/.zshrc
     # Install all the neccesory remaining tools
-
+---
 ## GPU Compatibility
 
     hashcat -I  # Check here
@@ -16,9 +16,8 @@
     sudo dpkg -i cuda-keyring_1.0-1_all.deb
     sudo apt update
     sudo apt-get install -y cuda
-
+---
 ### Kali NetHunter
-
     https://github.com/termux/termux-app/releases
     https://f-droid.org/packages/com.termux/
 
@@ -37,11 +36,8 @@
 
     nh -r                     -> Start Kali NetHunter cli as root
     nethunter -r <command>    -> Run <command> in Kali NetHunter environment as root
-
+---
 ### Zshrc Setup
-
-    # ln -s /mnt/d/work ~/j
-
     alias cdenv='cd /mnt/d/work'
     alias cdws='cd /mnt/d//work/ws'
     alias cdlnpt='cd /mnt/d/work/lnpt'
@@ -72,6 +68,36 @@
     cd /mnt/d/work/ws && clear
 
     echo -e "\n\e[97;44mWeb Application - Bug Bounty Hunting\e[0m\n"
+---
+### BashRc
+    alias cddesktop='cd ~/Desktop'
+    alias cddownloads='cd ~/Downloads'
+
+    alias mntjdp='sudo mount /dev/nvme0n1p5 /mnt/d/ && cd /mnt/d/work'
+
+    # alias spy3="source /mnt/d/work/py3/bin/activate"
+
+    alias emptyHistory='sudo echo "" > ~/.bash_history'
+    alias openHistory='sudo nano ~/.bash_history'
+
+    alias codelnpt='code /mnt/d/work/lnpt'
+
+    alias kupgrade='sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y'
+
+    alias obsh='sudo nano ~/.bashrc'
+    alias sbsh='source ~/.bashrc'
+
+    # python -m venv venv
+
+    if mountpoint -q /mnt/d/; then cd /mnt/d/work; else cd ~/Desktop; fi
+
+    echo -e "\n\e[97;44m   Web Application - Bug Bounty Hunting   \e[0m\n"
+
+    export GOPATH="$HOME/go"
+    export PATH="$PATH:$GOPATH/bin"
+
+    # Generated for pdtm. Do not edit.
+    export PATH=$PATH:/home/laks/.pdtm/go/bin
 
 ---
 
