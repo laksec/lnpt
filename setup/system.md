@@ -70,12 +70,20 @@
     echo -e "\n\e[97;44mWeb Application - Bug Bounty Hunting\e[0m\n"
 ---
 ### BashRc
+    # ln -s /mnt/d/work ~/j
+
+    alias cdwork='cd /mnt/d/work'
+    alias cdws='cd /mnt/d//work/ws'
+    alias cdtools='cd /mnt/d/work/tools'
+    alias cdlnpt='cd /mnt/d/work/lnpt'
+    alias cdweb3='cd /mnt/d/work/web3'
+
     alias cddesktop='cd ~/Desktop'
     alias cddownloads='cd ~/Downloads'
 
     alias mntjdp='sudo mount /dev/nvme0n1p5 /mnt/d/ && cd /mnt/d/work'
 
-    # alias spy3="source /mnt/d/work/py3/bin/activate"
+    alias spy3="source /mnt/d/work/py3/bin/activate"
 
     alias emptyHistory='sudo echo "" > ~/.bash_history'
     alias openHistory='sudo nano ~/.bash_history'
@@ -89,7 +97,7 @@
 
     # python -m venv venv
 
-    if mountpoint -q /mnt/d/; then cd /mnt/d/work; else cd ~/Desktop; fi
+    cd /mnt/d/work && clear
 
     echo -e "\n\e[97;44m   Web Application - Bug Bounty Hunting   \e[0m\n"
 
@@ -98,6 +106,9 @@
 
     # Generated for pdtm. Do not edit.
     export PATH=$PATH:/home/laks/.pdtm/go/bin
+
+    if mountpoint -q /mnt/d/; then cd /mnt/d/work; else cd ~/Desktop; fi
+
 
 ---
 
